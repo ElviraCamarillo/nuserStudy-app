@@ -9,7 +9,7 @@ export default class Navbar extends Component {
 	render(){
 		return(
 			<div className="navbar-container" >
-					<h1>NavBar</h1>
+					<h1>NavBar prueba</h1>
 					<img src={logo} alt=""/>
 					<Button variant="primary">Primary</Button>
 			</div>
