@@ -2,10 +2,10 @@ import React, {Component} from "react"
 
 //Importar imagenes
 import logo from '../../img/logo.svg'
-import logofb from '../../assets/logofb.svg'
-import logoInsta from '../../assets/logoInsta.svg'
-import logotw from '../../assets/logotw.svg'
-import logoComent from '../../assets/logoComent.svg'
+import logofb from '../../img/logofb.svg'
+import logoInsta from '../../img/logoInsta.svg'
+import logotw from '../../img/logotw.svg'
+import logoComent from '../../img/logoComent.svg'
 
 /*import { Button } from 'react-bootstrap'
 <Button variant="primary">Primary</Button>
@@ -15,7 +15,7 @@ export default class Footer extends Component {
 		return(
 			<div className="footer" >
                 <div className="divLogo">
-                  <h1><img src={logo}/>NurseStudy</h1>  
+                  <h1><img src={logo}alt=""/>NurseStudy</h1>  
                 </div>
 				<div className="divListas">
                   <ul className="listImgRedes">
@@ -37,12 +37,10 @@ export default class Footer extends Component {
                     </ul>
                 </div>
                 <div className="divNurseApp">
-                    <p>©NurseApp, 2021. Todos los derechos reservados</p>
-                    <p><img src={logoComent}/></p>
+                    <p className="pNurse">©NurseApp, 2021. Todos los derechos reservados</p>
+                    <p className="pimgComent"><img src={logoComent}alt=""/></p>
                 </div>	
-                    
-					
-					
+                   
 			</div>
 		)
 	}

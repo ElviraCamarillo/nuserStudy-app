@@ -1,6 +1,5 @@
 .footer{
     background-color: #DDe8f7;
-
 }
 .colorBorder{
     border: 1px solid blue;
@@ -30,4 +29,14 @@
     display: inline;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.pNurse{
+    text-align: left;
+    padding-left: 150px;
+    padding-top: 0px;
+}
+.pimgComent{
+    text-align: right;
+    padding-right: 150px;
 }
