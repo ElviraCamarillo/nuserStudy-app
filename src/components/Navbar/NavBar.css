@@ -1,0 +1,18 @@
+.button_pce{
+    border-radius: 50px;
+    border: solid 1px #FFFFFF;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+
+.nav_style{
+    font-size: 16px;
+}
+
+.nav_style:hover, .button_pce:hover{
+    color: #212353; 
+}
+
+.img_nav{
+    background-color: #FFFFFF;
+}
