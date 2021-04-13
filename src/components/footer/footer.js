@@ -1,0 +1,49 @@
+import React, {Component} from "react"
+
+//Importar imagenes
+import logo from '../../img/logo.svg'
+import logofb from '../../img/logofb.svg'
+import logoInsta from '../../img/logoInsta.svg'
+import logotw from '../../img/logotw.svg'
+import logoComent from '../../img/logoComent.svg'
+
+import './footer.css'
+
+/*import { Button } from 'react-bootstrap'
+<Button variant="primary">Primary</Button>
+*/
+export default class Footer extends Component {
+	render(){
+		return(
+			<div className="footer mt-2" >
+                <div className="divLogo">
+                  <h1 className="mt-5"><img src={logo}alt=""/>NurseStudy</h1>  
+                </div>
+				<div className="divListas">
+                  <ul className="listImgRedes">
+                        <li>
+                            <img src={logofb} alt=""/>
+                        </li>
+                        <li>
+                            <img src={logoInsta}alt=""/>
+                        </li>
+                        <li>
+                            <img src={logotw}alt=""/>
+                        </li>
+                    </ul>
+                    <ul className="listOpciones">
+                        <li>Avíso de Privacidad</li>
+                        <li>Terminos y condiciones</li>
+                        <li>Preguntas frecuentes</li>
+                        <li>Otra sección</li>
+                    </ul>
+                </div>
+                <div className="divNurseApp">
+                    <p className="pNurse">©NurseApp, 2021. Todos los derechos reservados</p>
+                    <p className="pimgComent"><img src={logoComent}alt=""/></p>
+                </div>	
+                   
+			</div>
+		)
+	}
+}
