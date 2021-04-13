@@ -7,15 +7,17 @@ import logoInsta from '../../img/logoInsta.svg'
 import logotw from '../../img/logotw.svg'
 import logoComent from '../../img/logoComent.svg'
 
+import './footer.css'
+
 /*import { Button } from 'react-bootstrap'
 <Button variant="primary">Primary</Button>
 */
 export default class Footer extends Component {
 	render(){
 		return(
-			<div className="footer" >
+			<div className="footer mt-2" >
                 <div className="divLogo">
-                  <h1><img src={logo}alt=""/>NurseStudy</h1>  
+                  <h1 className="mt-5"><img src={logo}alt=""/>NurseStudy</h1>  
                 </div>
 				<div className="divListas">
                   <ul className="listImgRedes">

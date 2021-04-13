@@ -11,7 +11,7 @@ import {Navbar, Nav} from 'react-bootstrap'
 export default class NavbarH extends Component {
 	render(){
 		return(
-			<div className="navbar-container mt-1 mb-1" >
+			<div className="navbar-container mt-1 mb-1 container" >
 				<Navbar expand="lg">
 					<img src={logo} alt="" href=""/>
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
