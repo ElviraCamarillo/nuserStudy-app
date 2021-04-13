@@ -11,18 +11,17 @@ import div1 from '../../components/Div1/div1'
 import './Home.css'
 import '../../components/footer/footer.css'
 import Div1 from '../../components/Div1/div1'
+
+
 export default class Home extends Component {
   render(){
     return(
-      <div className="container">
+      <div className="">
         <NavbarH/>
 
         <Div1/>
 
         <Footer/>
-        
-        
-
       </div>
     )
   }
