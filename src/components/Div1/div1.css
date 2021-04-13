@@ -1,0 +1,29 @@
+.divContainer{
+    border: 1px solid red; 
+}
+.div1.home{
+    border: 1px solid red;
+}
+.btnBlue{
+    border-radius: 50px;
+}
+.Title{
+   color: yellow;
+   padding-left: 20px;
+}
+.elParrafo{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btnHome1{
+    border-radius: 50px;
+    padding-left: 20px;
+    color: green;
+}
+.elBoton1{
+    color: greenyellow;
+}
+.elBoton{
+    padding-left: 20px;
+}
