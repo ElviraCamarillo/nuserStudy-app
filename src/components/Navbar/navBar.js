@@ -13,7 +13,7 @@ export default class NavbarH extends Component {
 		return(
 			<div className="navbar-container mt-1 mb-1" >
 				<Navbar expand="lg">
-					<img src={logo} alt="" href=""/>
+        <Nav.Link href="/" className=""><img src={logo} alt=""/></Nav.Link>
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 					<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 						<Nav className="d-flex">
@@ -27,4 +27,5 @@ export default class NavbarH extends Component {
 		)
 	}
 }
+
 
