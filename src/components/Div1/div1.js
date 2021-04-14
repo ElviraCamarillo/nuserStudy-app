@@ -5,6 +5,7 @@ import './div1.css';
 
 //Importar imagenes
 import nurseHome from '../../img/img-nurse-home.svg'
+import flechaHorizontal from '../../img/img-btn-s1.svg'
 
 //importar elementos de bootstra
 import { Button } from 'react-bootstrap'
@@ -14,13 +15,13 @@ import { Button } from 'react-bootstrap'
 export default class Div1 extends Component {
 	render(){
 		return(
-            <div className="divContainer row row-cols-2">
-                <div className="div1-home col-5 " >
-                    <h1 className="Title">Aprendamos juntos sobre el Proceso Cuidado Enfermero</h1>
-                    <p className="elParrafo">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
-                    <p className="elBoton"><Button className="btnHome1 elBoton1">Conoce más</Button></p>
+            <div className="divContainer container d-flex mt-5 ">
+                <div className="div1-home col-6 py-5" >
+                    <h1 className="Title ">Aprendamos juntos sobre el Proceso Cuidado Enfermero</h1>
+                    <p className="elParrafo mt-5 mb-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
+                    <Button variant="primary" className="btnHome1">Conoce más<img src={flechaHorizontal}alt="" className="vectorBtn"/></Button>
 			    </div> 
-                <div className="colorBorder col-5 offset-1">
+                <div className="col-6 d-flex justify-content-end">
                     <img src={nurseHome}alt=""/>
                 </div>
                 
