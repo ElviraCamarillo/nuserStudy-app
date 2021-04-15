@@ -22,3 +22,14 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
+
+.divCardValoration{
+    background-image: url("../../img//fondo-card-pce-1.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: right;
+    }
+
+.logoCardDiagnostic{
+    min-width: 214px;
+    min-height: 199px;
+}

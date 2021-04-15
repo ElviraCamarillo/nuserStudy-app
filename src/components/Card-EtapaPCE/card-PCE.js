@@ -8,7 +8,7 @@ import elLogoCard from '../../img/logo-card-pce-1.svg'
 import laFlechaCard from '../../img/flecha-vector-card.svg'
 
 export default class CardPCE extends Component {
-	render(props){
+	render(){
 
 		return(
       <div className="divPCE container mt-5">
@@ -20,7 +20,7 @@ export default class CardPCE extends Component {
             <h2 className="elTitulo mt-4 mb-4">Valoración</h2>
             <p className="elContenido">Recolección de datos, organización, ponderación y registro de los datos sobre el estado de salud del paciente
             </p>
-            <a href= ""className="linkPCE" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+            <a href= ""className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
           </div>
             
         </div>
