@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
-import Footer from '../../components/Footer/footer'
+import Footer from '../../components/footer/footer'
 
 
 // Import CSS
