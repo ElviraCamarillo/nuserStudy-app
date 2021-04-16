@@ -15,7 +15,7 @@ import { Button } from 'react-bootstrap'
 export default class Div1 extends Component {
 	render(){
 		return(
-            <div className="divContainer container d-flex mt-5 ">
+            <div className="container d-flex mt-5 ">
                 <div className="div1-home col-6 py-5" >
                     <h1 className="Title ">Aprendamos juntos sobre el Proceso Cuidado Enfermero</h1>
                     <p className="elParrafo mt-5 mb-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
@@ -24,7 +24,6 @@ export default class Div1 extends Component {
                 <div className="col-6 d-flex justify-content-end">
                     <img src={nurseHome}alt=""/>
                 </div>
-                
 			</div>
             
 		)

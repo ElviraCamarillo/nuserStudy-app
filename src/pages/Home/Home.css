@@ -1,0 +1,37 @@
+.titleHome{
+    color: #1e3f63;
+    font-weight: 800;
+    font-size: 3rem;
+} 
+
+.textHome{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.buttonHome{
+    border: solid #1479FF;
+    background-color: #1479FF;
+    border-radius: 50px;
+    color: #FFF;
+}
+
+.buttonHomePrincipal{
+    width: 13.75rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.divCardValoration{
+    background-image: url("../../img//fondo-card-pce-1.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+    background-size: contain;
+    /*border:1px solid green;*/
+    }
+
+.logoCardDiagnostic{
+    min-width: 214px;
+    min-height: 199px;
+}
