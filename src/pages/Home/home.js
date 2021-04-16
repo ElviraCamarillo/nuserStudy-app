@@ -13,7 +13,7 @@ import DivBeneficios from '../../components/DivBeneficios/dBeneficios'
 // Import CSS
 import './Home.css'
 
-//Importar imagenes
+//Importar imagenes 
 import nurseHome from '../../img/img-nurse-home.svg'
 import flechaHorizontal from '../../img/img-btn-s1.svg'
 import arrowBtn from '../../img/flecha-vector-btn.svg'

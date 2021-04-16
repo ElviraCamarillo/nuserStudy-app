@@ -8,12 +8,12 @@ import Footer from '../../components/footer/footer'
 import Api from '../../lib/api'
 
 // Import CSS
-import './Login.css'
+import './Singup.css'
 
 import imageLogin from '../../img/img_login.svg'
 import desktop from '../../img/desktop.svg'
 
-export default class Login extends Component {
+export default class Singup extends Component {
   constructor (props){
     super(props)
     this.state = {
@@ -62,7 +62,7 @@ export default class Login extends Component {
             <div className="col-12 col-md-6 text-center">
               <div className="container_text_login mt-5 mb-5">
                 <img src={desktop} alt="" class="" />
-                <h2 class="">Inicia sesión</h2>
+                <h2 class="">Registrarse</h2>
                 <p>Para ayudarte a mantener tú score</p>
                 <GoogleLogin className=""
                   clientId="27723578629-id19f9kqmbgv2p1f5doah7sf4a5h1t99.apps.googleusercontent.com"
