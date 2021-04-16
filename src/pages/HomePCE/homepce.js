@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap'
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
-import CardPCE from '../../components/Card-EtapaPCE/card-PCE'
 import TituloPCE from '../../components/DTituloPCE/titulo-PCE'
 
 // Import CSS
@@ -14,7 +13,7 @@ import elLogoCard from '../../img/logo-card-pce-1.svg'
 import laFlechaCard from '../../img/flecha-vector-card.svg'
 import student from '../../img/reading.svg'
 
-export default class Home extends Component {
+export default class HomePCE extends Component {
   render(){
     return(
       <div className="">
@@ -103,7 +102,7 @@ export default class Home extends Component {
         </div>
 
       {/*etiqueta */}
-      <div className="cardStart col-12 col-lg-6 d-flex  mb-5 ml-8">
+      <div className="cardStart col-12 col-lg-6 d-flex  mb-5 ">
         
             <div className="my-auto mr-4">
               <p className="textCardStart">¿Listo para poner a prueba lo aprendido?</p>

@@ -27,11 +27,34 @@
     background-image: url("../../img//fondo-card-pce-1.svg");
     background-repeat: no-repeat;
     background-position:center; /* Center the image */
-    background-size: contain;
+    /*background-size: contain;*/
     /*border:1px solid green;*/
     }
 
 .logoCardDiagnostic{
     min-width: 214px;
     min-height: 199px;
+}
+
+.divCardDiagnosis{
+    background-image: url("../../img//fondo-card-pce-2.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+}
+.divCardEvaluation{
+    background-image: url("../../img//fondo-card-pce-5.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+    
+   
+}
+.divCardEjecution{
+    background-image: url("../../img//fondo-card-pce-3.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+}
+.divCardPlanning{
+    background-image: url("../../img//fondo-card-pce-4.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
 }
