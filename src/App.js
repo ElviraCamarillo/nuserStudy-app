@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
 import StagesPCE from './pages/StagesPCE/stagesPce'
+import ValorationDescription from './pages/ValorationDescription/valorationDescription'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
@@ -16,7 +17,7 @@ export default class App extends Component{
         <Switch>
           <Route
             exact path="/"
-            component={StagesPCE}
+            component={ValorationDescription}
           />
         </Switch>
         <Switch>
