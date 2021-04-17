@@ -7,13 +7,13 @@ import Footer from '../../components/footer/footer'
 import TituloPCE from '../../components/DTituloPCE/titulo-PCE'
 
 // Import CSS
-import './HomePCE.css'
+import './StagesPCE.css'
 
 import elLogoCard from '../../img/logo-card-pce-1.svg'
 import laFlechaCard from '../../img/flecha-vector-card.svg'
 import student from '../../img/reading.svg'
 
-export default class HomePCE extends Component {
+export default class StagesPCE extends Component {
   render(){
     return(
       <div className="">
@@ -102,16 +102,19 @@ export default class HomePCE extends Component {
         </div>
 
       {/*etiqueta */}
-      <div className="cardStart col-12 col-lg-6 d-flex  mb-5 ">
-        
-            <div className="my-auto mr-4">
-              <p className="textCardStart">¿Listo para poner a prueba lo aprendido?</p>
-              <Button bsPrefix="buttonHome buttonHomePrincipal" >Empezar</Button>
-            </div>
-            <div className="mt-4 mb-4">
-              <img src={student}alt="" className=""/>
-            </div>
+      
+      <div className=" row  mb-5 ">
+          <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
+               <div className="bor col-6">
+                    <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
+                    <Button bsPrefix="buttonCardStart mt-3 " >Empezar</Button>
+                </div>
+                <div className="col-6 ">
+                    <img src={student}alt="" className=""/>
+                </div>
           </div>
+        </div>
+            
 
         
 
