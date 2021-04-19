@@ -25,11 +25,17 @@
 
 .divCardValoration{
     background-image: url("../../img//fondo-card-pce-1.svg");
-    background-repeat: no-repeat, repeat;
-    background-position: right;
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+    /*border:1px solid green;*/
     }
 
 .logoCardDiagnostic{
     min-width: 214px;
     min-height: 199px;
 }
+
+.linkPCE{
+    font-weight: 800;
+    color: #212353;
+    }

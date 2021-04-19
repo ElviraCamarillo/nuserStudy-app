@@ -2,6 +2,7 @@ import React, { Component } from  'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home/home'
+import HomePCE from './pages/HomePCE/homepce'
 import Login from './pages/Login/Login'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -31,8 +32,16 @@ export default class App extends Component{
             component={Singup}
           />
         </Switch>
+        <Switch>
+          <Route
+            exact path="/pce"
+            component={HomePCE}
+          />
+        </Switch>
       </div>
     </BrowserRouter>
+
+
     )
   }
 }

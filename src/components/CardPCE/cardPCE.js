@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import { Card } from "react-bootstrap";
 
 //importar estilos
 import './CardPCE.css';
@@ -7,6 +6,8 @@ import './CardPCE.css';
 //Importar imagenes
 import elLogoCard from '../../img/logo-card-pce-1.svg'
 import laFlechaCard from '../../img/flecha-vector-card.svg'
+
+
 export default class CardPCEOne extends Component {
   constructor(props){
     super(props)

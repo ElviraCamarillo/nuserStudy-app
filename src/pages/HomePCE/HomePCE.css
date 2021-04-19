@@ -1,0 +1,10 @@
+.cardStart{
+    background-color: #FEE3ed;
+    border:1px solid green;
+    text-align: center;
+}
+.textCardStart{
+    font-weight: 600;
+    color: #183b67;
+font-size: 32px;
+}
