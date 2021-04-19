@@ -17,13 +17,25 @@ export default class App extends Component{
         <Switch>
           <Route
             exact path="/"
-            component={ValorationDescription}
+            component={Home}
           />
         </Switch>
         <Switch>
           <Route
             exact path="/login"
             component={Login}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/etapasValoracion"
+            component={StagesPCE}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/valoracionTema"
+            component={ValorationDescription}
           />
         </Switch>
       </div>

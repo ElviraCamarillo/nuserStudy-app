@@ -22,7 +22,14 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
-
+.textOnBtn{
+    color:rgb(245, 243, 243);
+    text-decoration:none;
+}
+.textOnBtn:hover{
+    color:  #FFF;
+    text-decoration:none;
+}
 .divCardValoration{
     background-image: url("../../img//fondo-card-pce-1.svg");
     background-repeat: no-repeat;

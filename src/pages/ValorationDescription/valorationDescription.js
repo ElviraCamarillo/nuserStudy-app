@@ -118,7 +118,10 @@ export default class ValorationDescription extends Component {
                   <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
                       <div className="bor col-6">
                             <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
-                            <Button bsPrefix="buttonCardStart mt-3 " >Empezar</Button>
+                            
+                            <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
+                            
+                            
                       </div>
                       <div className="col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>
