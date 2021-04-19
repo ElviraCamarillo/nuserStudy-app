@@ -102,13 +102,13 @@ export default class StagesPCE extends Component {
         </div>
 
       {/*etiqueta */}
-        <div className=" row  mb-5 ">
-          <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
-               <div className="bor col-6">
-                    <p className="textCardStart mt-5">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
-                    <Button bsPrefix="buttonCardStart mt-3 " >Empezar</Button>
+        <div className=" row  mb-5 justify-content-center ">
+          <div className="cardStart col-12 col-md-8 col-lg-8 col-lg-o d-flex  justify-content-center align-item-center">
+               <div className="  col-6 ">
+                    <p className="textCardStart mt-5">¿Listo para poner a prueba lo aprendido?</p>
+                    <Button bsPrefix="buttonCardStart mt-3 mb-4" >Empezar</Button>
                 </div>
-                <div className="col-6 ">
+                <div className="d-none d-sm-none d-md-block  col-6 ">
                     <img src={student}alt="" className=""/>
                 </div>
           </div>
