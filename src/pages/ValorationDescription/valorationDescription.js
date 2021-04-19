@@ -24,7 +24,7 @@ export default class ValorationDescription extends Component {
         <NavbarH/>
         <div className="container">
 
-              <div className="row divCardValoration mb-5 ">
+              <div className="row divCardValoration mb-5 mt-5">
                 <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
                   <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
                 </div>

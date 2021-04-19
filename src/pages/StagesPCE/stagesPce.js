@@ -29,7 +29,7 @@ export default class StagesPCE extends Component {
               <p className="">
                 Recolección de datos, organización, ponderación y registro de los datos sobre <br/>el estado de salud del paciente
               </p>
-              <a href= "{url}"className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+              <a href="/valoracionTema" className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
             </div>
           </div>
           
@@ -102,11 +102,10 @@ export default class StagesPCE extends Component {
         </div>
 
       {/*etiqueta */}
-      
-      <div className=" row  mb-5 ">
+        <div className=" row  mb-5 ">
           <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
                <div className="bor col-6">
-                    <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
+                    <p className="textCardStart mt-5">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
                     <Button bsPrefix="buttonCardStart mt-3 " >Empezar</Button>
                 </div>
                 <div className="col-6 ">

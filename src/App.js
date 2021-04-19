@@ -28,7 +28,7 @@ export default class App extends Component{
         </Switch>
         <Switch>
           <Route
-            exact path="/etapasValoracion"
+            exact path="/pce"
             component={StagesPCE}
           />
         </Switch>
