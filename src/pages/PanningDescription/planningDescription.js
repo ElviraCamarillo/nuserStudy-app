@@ -38,34 +38,25 @@ export default class PlanningDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase1} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
+                          <div className="col-12 col-md-9 mt-4">
                               <p >
                               Comprende la serie de pasos con los que la enfermera y el paciente establecen las prioridades y los objetivos 
                               para revolver o disminuir los problemas detectados en el paciente.
                               </p>
-                              
+                               <p> 
+                              Es una fase sistemática y deliberativa del proceso de enfermera en la que se toman decisiones y se resuelven problemas.
+                              </p>  
                             </div>
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase2} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
-                              <p> 
-                              Es una fase sistemática y deliberativa del proceso de enfermera en la que se toman decisiones y se resuelven problemas.
-                              </p>                    
-                            </div>
-              </div>
-       
-              <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 "/>
-                          </div>
-                          <div className="col-6 col-md-9 mt-4">
+                          <div className="col-12 col-md-9 mt-4">
                               <p >
                               Existen diferentes tipos de planeación: 
                               </p>                      
@@ -83,16 +74,16 @@ export default class PlanningDescription extends Component {
 
               
       
-              <div className=" row  mb-5 ">
-                  <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
-                      <div className="bor col-6">
-                            <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
+              <div className=" row  mb-5 justify-content-center">
+                  <div className="cardStart col-12 col-md-8  d-flex  justify-content-center align-item-center">
+                      <div className="col-6">
+                            <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
                             
-                            <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
+                            <Button bsPrefix="buttonCardStart mt-3 mb-3"  >Empezar</Button>
                             
                             
                       </div>
-                      <div className="col-6 ">
+                      <div className="d-none d-sm-none d-md-block col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>
                       </div>
                   </div>

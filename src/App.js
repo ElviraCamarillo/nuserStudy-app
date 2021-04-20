@@ -63,7 +63,7 @@ export default class App extends Component{
         <Switch>
           <Route
             exact path="/evaluacionTema"
-            component={EjecutionDescription}
+            component={EvaluationDescription}
           />
         </Switch>
       </div>

@@ -33,40 +33,32 @@ export default class DiagnosisDescription extends Component {
                   Segunda fase del proceso de enfermería. En esta fase se interpretan los datos mediante un enunciado 
                   de juicio clínico y se identifican las fortalezas y problemas del paciente.<br/>
                   </p>
+                  
                 </div>
               </div>
 
+              
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
-                              <p >
-                              Consiste en la identificación de los problemas reales y potenciales, así como los recursos con los que cuenta el 
-                              paciente mediante el análisis de datos
-                              </p>
-                              
-                              
-                            </div>
-              </div>
-
-              <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase2} alt="" className="elLogoCard p-2 "/>
+                          <div className="col-12 col-6 col-md-9 mt-4">
+                            <p >
+                            Consiste en la identificación de los problemas reales y potenciales, así como los recursos con los que cuenta el 
+                            paciente mediante el análisis de datos
+                            </p>
+                            <p >
+                            Es un juicio clínico sobre la respuesta de un individuo, familia o una comunidad frente a los 
+                            procesos vitales o problemas de salud
+                            </p>                    
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
-                              <p >
-                              Es un juicio clínico sobre la respuesta de un individuo, familia o una comunidad frente a los 
-                              procesos vitales o problemas de salud
-                              </p>                    
-                            </div>
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
+                          <div className="col-12 col-md-9 mt-4">
                               <p >
                                 El proceso de diagnostico incluye: 
                               </p>                      
@@ -84,16 +76,16 @@ export default class DiagnosisDescription extends Component {
 
             
       
-              <div className=" row  mb-5 ">
-                  <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
-                      <div className="bor col-6">
-                            <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
+              <div className=" row  mb-5 justify-content-center">
+                  <div className="cardStart col-12 col-md-8 d-flex  justify-content-center align-item-center">
+                      <div className=" col-6">
+                            <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
                             
-                            <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
+                            <Button bsPrefix="buttonCardStart mt-3 mb-3 "  >Empezar</Button>
                             
                             
                       </div>
-                      <div className="col-6 ">
+                      <div className="d-none d-sm-none d-md-block col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>
                       </div>
                   </div>

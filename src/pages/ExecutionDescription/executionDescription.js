@@ -39,10 +39,10 @@ export default class ExecutionDescription extends Component {
               </div>
               
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase2} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
+                          <div className="col-12 col-md-9 mt-4">
                               <p> 
                                   Fases de ejecución: 
                               </p>     
@@ -62,10 +62,10 @@ export default class ExecutionDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 "/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9 mt-4">
+                          <div className="col-12 col-md-9 mt-4">
                               <p >
                               Existen diferentes tipos de planeación: 
                               </p>                      
@@ -83,16 +83,16 @@ export default class ExecutionDescription extends Component {
 
               
       
-              <div className=" row  mb-5 ">
-                  <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
-                      <div className="bor col-6">
+              <div className=" row  mb-5 justify-content-center">
+                  <div className="cardStart col-12 col-md-8 d-flex  justify-content-center align-item-center">
+                      <div className=" col-6">
                             <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
                             
-                            <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
+                            <Button bsPrefix="buttonCardStart mt-3 mb-3"  >Empezar</Button>
                             
                             
                       </div>
-                      <div className="col-6 ">
+                      <div className="d-none d-sm-none d-md-block col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>
                       </div>
                   </div>
