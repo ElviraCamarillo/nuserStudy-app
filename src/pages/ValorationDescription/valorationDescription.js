@@ -24,7 +24,7 @@ export default class ValorationDescription extends Component {
         <NavbarH/>
         <div className="container">
 
-              <div className="row divCardValoration mb-5 ">
+              <div className="row divCardValoration mb-5 mt-5">
                 <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
                   <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
                 </div>
@@ -43,10 +43,10 @@ export default class ValorationDescription extends Component {
               <h1>Fases</h1>
 
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className="elLogoCard p-2 mt-4"/>
+                          <div className="d-none d-sm-none d-md-block col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase1} alt="" className=" elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9">
+                          <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">1-Obtención de datos</h3>
                               <p >
                               Consta de diferentes tipos; Inicial -Se realiza en el ingreso a la institución sanitaria, para establecer una identificación del paciente, 
@@ -70,10 +70,10 @@ export default class ValorationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9">
+                          <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">2-Validación de datos</h3>
                               <p >
                               Verificar y confirmar los datos para determinar si responden a los hechos. A través de escalas de medición, datos críticos, congruencia de datos etc.
@@ -88,10 +88,10 @@ export default class ValorationDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className=" d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9">
+                          <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">3-Organización de datos</h3>
                               <p >
                               Consiste en la agrupación de los datos en categorías de información de forma que tengan sentido, puedan verse las relaciones entre ellos e identificar 
@@ -103,10 +103,10 @@ export default class ValorationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4"/>
                           </div>
-                          <div className="col-6 col-md-9">
+                          <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">4-Registro de datos</h3>
                               <p >
                               Consiste en informar y registrar los datos que se obtuvieron durante la observación, entrevista y exploración física. 
@@ -114,16 +114,16 @@ export default class ValorationDescription extends Component {
                             </div>
               </div>
       
-              <div className=" row  mb-5 ">
-                  <div className="cardStart col-md-8 offset-2  d-flex  justify-content-center align-item-center">
-                      <div className="bor col-6">
+              <div className=" row  mb-5 justify-content-center ">
+                  <div className="cardStartValoration col-12 col-md-8 offset-2  d-flex  justify-content-center align-item-center">
+                      <div className=" col-6">
                             <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
                             
                             <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
                             
                             
                       </div>
-                      <div className="col-6 ">
+                      <div className="d-none d-sm-none d-md-block col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>
                       </div>
                   </div>

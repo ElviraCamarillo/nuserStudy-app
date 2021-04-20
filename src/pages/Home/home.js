@@ -46,7 +46,7 @@ export default class Home extends Component {
             <div className="col-12 col-md-6 mb-5 d-flex justify-content-start flex-column">
               <h1 className="titleHome ">Aprendamos juntos sobre el Proceso Cuidado Enfermero</h1>
               <p className="textHome mt-3  mt-md-5  mb-3 mb-md-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
-              <Button bsPrefix="buttonHome buttonHomePrincipal" ><a href="/etapasValoracion" className="textOnBtn">Conoce más</a><img src={flechaHorizontal}alt="" className="pl-3"/></Button>
+              <Button bsPrefix="buttonHome buttonHomePrincipal" ><a href="/pce" className="textOnBtn">Conoce más</a><img src={flechaHorizontal}alt="" className="pl-3"/></Button>
             </div> 
             <div className="col-12 col-md-6">
               <img src={nurseHome}alt=""/>
