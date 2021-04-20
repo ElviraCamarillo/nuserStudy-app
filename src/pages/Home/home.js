@@ -46,7 +46,7 @@ export default class Home extends Component {
             <div className="col-12 col-md-6 mb-5 d-flex justify-content-start flex-column">
               <h1 className="titleHome ">Aprendamos juntos sobre el Proceso Cuidado Enfermero</h1>
               <p className="textHome mt-3  mt-md-5  mb-3 mb-md-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
-              <Button bsPrefix="buttonHome buttonHomePrincipal" >Conoce más<img src={flechaHorizontal}alt="" className="pl-3"/></Button>
+              <Button bsPrefix="buttonHome buttonHomePrincipal" ><a href="/pce" className="textOnBtn">Conoce más</a><img src={flechaHorizontal}alt="" className="pl-3"/></Button>
             </div> 
             <div className="col-12 col-md-6">
               <img src={nurseHome}alt=""/>
@@ -62,7 +62,7 @@ export default class Home extends Component {
               <p className="">
                 Recolección de datos, organización, ponderación y registro de los datos sobre <br/>el estado de salud del paciente
               </p>
-              <a className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+              <a className="linkPCE mb-2" href="/valoracionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
             </div>
           </div>
 
@@ -136,8 +136,8 @@ export default class Home extends Component {
          {/*separador */}
         <div className="row">
           <div className="dRegistroPCE col-12 mt-5 text-center">
-            <h2 className="mb-4">Click aquí para crear registro</h2>
-            <Button bsPrefix="buttonHome p-2">Proceso Cuidado Enfermero
+            <h2 className="mb-4">Click aquí para registrarte</h2>
+            <Button href="" bsPrefix="buttonHome p-2">Crear Cuenta
             <img src={arrowBtn}alt="" className="vectorBtn"/>
             </Button>
           </div>

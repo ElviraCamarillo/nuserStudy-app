@@ -1,0 +1,26 @@
+.cardStart{
+    background-color: #FEE3ed;
+    border-radius:32px ;
+}
+.textCardStart{
+    font-weight: 600;
+    color: #183b67;
+font-size: 32px;
+}
+
+.buttonCardStart{
+    border: solid #5E358F;
+    background-color: #5E358F;
+    border-radius: 50px;
+    color: #FFF;
+
+    width: 13.75rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+
+}
+.bor{
+    border: 1px solid green;
+}

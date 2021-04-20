@@ -2,8 +2,9 @@ import React, { Component } from  'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home/home'
-import HomePCE from './pages/HomePCE/homepce'
 import Login from './pages/Login/Login'
+import StagesPCE from './pages/StagesPCE/stagesPce'
+import ValorationDescription from './pages/ValorationDescription/valorationDescription'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
@@ -23,6 +24,18 @@ export default class App extends Component{
           <Route
             exact path="/login"
             component={Login}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/pce"
+            component={StagesPCE}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/valoracionTema"
+            component={ValorationDescription}
           />
         </Switch>
       </div>
