@@ -5,10 +5,14 @@ import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
 import StagesPCE from './pages/StagesPCE/stagesPce'
 import ValorationDescription from './pages/ValorationDescription/valorationDescription'
+
+import Error from './pages/Error404/error404'
+
 import DiagnosisDescription from './pages/DiagnosisDescription/diagnosisDescription'
 import PlanningDescription from './pages/PanningDescription/planningDescription'
 import EjecutionDescription from './pages/ExecutionDescription/executionDescription'
 import EvaluationDescription from './pages/EvaluationDescription/evaluationDescription'
+
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
