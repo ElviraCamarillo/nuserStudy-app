@@ -1,0 +1,29 @@
+.text404{
+    font-weight: 600;
+    font-size:  3.75em;
+
+}
+.textPageError{
+    font-size: 2.5em;
+    font-weight: 400;
+}
+.btnPageErrorHome{
+    border: solid #4459FE;
+    background-color: #4459FE;
+    border-radius: 50px;
+    color: #FFF;
+
+    width: 13.75rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+}
+
+.txtOnBtn{
+    color:rgb(238, 234, 234);
+}
+.txtOnBtn:hover{
+    color: #FFF;
+    text-decoration: none;
+}

@@ -5,6 +5,7 @@ import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
 import StagesPCE from './pages/StagesPCE/stagesPce'
 import ValorationDescription from './pages/ValorationDescription/valorationDescription'
+import Error from './pages/Error404/error404'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
