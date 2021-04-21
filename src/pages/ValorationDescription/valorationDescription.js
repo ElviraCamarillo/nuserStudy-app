@@ -115,11 +115,11 @@ export default class ValorationDescription extends Component {
               </div>
       
               <div className=" row  mb-5 justify-content-center ">
-                  <div className="cardStartValoration col-12 col-md-8 offset-2  d-flex  justify-content-center align-item-center">
+                  <div className="cardStartValoration col-12 col-md-8  d-flex  justify-content-center align-item-center">
                       <div className=" col-6">
-                            <p className="textCardStart mt-4">¿Listo para<br/> poner a prueba<br/> lo aprendido?</p>
+                            <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
                             
-                            <Button bsPrefix="buttonCardStart mt-3 "  >Empezar</Button>
+                            <Button bsPrefix="buttonCardStart mt-3 mb-3"  >Empezar</Button>
                             
                             
                       </div>

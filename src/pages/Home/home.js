@@ -77,7 +77,7 @@ export default class Home extends Component {
                     Consiste en la identificación de los problemas reales y potenciales, así como los recursos con los que cuenta el 
                     paciente mediante el análisis de datos
                   </p>
-                  <a href= ""className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+                  <a href= ""className="linkPCE mb-2"href="/diagnosticoTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default class Home extends Component {
                     Comprende la serie de pasos con los que la enfermera y el paciente establecen las prioridades y los objetivos para
                     revolver o disminuir los problemas detectados en el paciente.
                     </p>
-                    <a href= ""className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+                    <a href= ""className="linkPCE mb-2" href="/planeacionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
                 </div>
 
               </div>
@@ -112,7 +112,7 @@ export default class Home extends Component {
               Es la practica del plan de cuidados de enfermería y finaliza con el registro de los cuidados prestados y las respuestas 
               del paciente.
               </p>
-              <a href= ""className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+              <a href= ""className="linkPCE mb-2" href="/EjecucionTema">Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
             </div>
 
           </div>
@@ -128,7 +128,7 @@ export default class Home extends Component {
               Es la valoración de las respuestas del paciente a las intervenciones enfermeras y la comparación de las respuestas con los objetivos 
               que se redactaron en la planeación.
               </p>
-              <a href= ""className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+              <a href= ""className="linkPCE mb-2" href="/evaluacionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
             </div>
           </div>
 
