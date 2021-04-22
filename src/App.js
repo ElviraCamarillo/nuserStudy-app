@@ -4,10 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 import Home from './pages/Home/home'
-import HomePCE from './pages/HomePCE/homepce'
 import Login from './pages/Login/Login'
 import TriviasPage from './pages/Trivias/trivias'
 import Singup from './pages/Singup/singup'
+import StagesPCE from './pages/StagesPCE/stagesPce'
+import ValorationDescription from './pages/ValorationDescription/valorationDescription'
+import Error from './pages/Error404/error404'
+import DiagnosisDescription from './pages/DiagnosisDescription/diagnosisDescription'
+import PlanningDescription from './pages/PanningDescription/planningDescription'
+import EjecutionDescription from './pages/ExecutionDescription/executionDescription'
+import EvaluationDescription from './pages/EvaluationDescription/evaluationDescription'
+
 
 export default class App extends Component{
   render(){
@@ -30,12 +37,39 @@ export default class App extends Component{
           <Route
             exact path="/singup"
             component={Singup}
+
+            exact path="/pce"
+            component={StagesPCE}
           />
         </Switch>
         <Switch>
           <Route
-            exact path="/pce"
-            component={HomePCE}
+            exact path="/valoracionTema"
+            component={ValorationDescription}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/diagnosticoTema"
+            component={DiagnosisDescription}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/planeacionTema"
+            component={PlanningDescription}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/EjecucionTema"
+            component={EjecutionDescription}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/evaluacionTema"
+            component={EvaluationDescription}
           />
         </Switch>
         <Switch>
@@ -44,7 +78,12 @@ export default class App extends Component{
             component={TriviasPage}
           />
         </Switch>
-
+        <Switch>
+          <Route
+            exact path="/error"
+            component={Error}
+          />
+        </Switch>
       </div>
     </BrowserRouter>
 

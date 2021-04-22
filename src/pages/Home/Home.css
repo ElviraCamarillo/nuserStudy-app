@@ -22,11 +22,19 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
-
+.textOnBtn{
+    color:rgb(245, 243, 243);
+    text-decoration:none;
+}
+.textOnBtn:hover{
+    color:  #FFF;
+    text-decoration:none;
+}
 .divCardValoration{
     background-image: url("../../img//fondo-card-pce-1.svg");
     background-repeat: no-repeat;
     background-position:center; /* Center the image */
+    /*background-size: contain;*/
     /*border:1px solid green;*/
     }
 
@@ -35,7 +43,25 @@
     min-height: 199px;
 }
 
-.linkPCE{
-    font-weight: 800;
-    color: #212353;
-    }
+.divCardDiagnosis{
+    background-image: url("../../img//fondo-card-pce-2.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+}
+.divCardEvaluation{
+    background-image: url("../../img//fondo-card-pce-5.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+    
+   
+}
+.divCardEjecution{
+    background-image: url("../../img//fondo-card-pce-3.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+}
+.divCardPlanning{
+    background-image: url("../../img//fondo-card-pce-4.svg");
+    background-repeat: no-repeat;
+    background-position:center; /* Center the image */
+}

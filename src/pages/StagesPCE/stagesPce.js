@@ -7,13 +7,13 @@ import Footer from '../../components/footer/footer'
 import TituloPCE from '../../components/DTituloPCE/titulo-PCE'
 
 // Import CSS
-import './HomePCE.css'
+import './StagesPCE.css'
 
 import elLogoCard from '../../img/logo-card-pce-1.svg'
 import laFlechaCard from '../../img/flecha-vector-card.svg'
 import student from '../../img/reading.svg'
 
-export default class HomePCE extends Component {
+export default class StagesPCE extends Component {
   render(){
     return(
       <div className="">
@@ -29,7 +29,7 @@ export default class HomePCE extends Component {
               <p className="">
                 Recolección de datos, organización, ponderación y registro de los datos sobre <br/>el estado de salud del paciente
               </p>
-              <a href= "{url}"className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+              <a href="/valoracionTema" className="linkPCE mb-2" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
             </div>
           </div>
           
@@ -102,19 +102,17 @@ export default class HomePCE extends Component {
         </div>
 
       {/*etiqueta */}
-      <div className="cardStart col-12 col-lg-6 d-flex  mb-5 ml-8">
-        
-            <div className="my-auto mr-4">
-              <p className="textCardStart">¿Listo para poner a prueba lo aprendido?</p>
-              <Button bsPrefix="buttonHome buttonHomePrincipal" >Empezar</Button>
-            </div>
-            <div className="mt-4 mb-4">
-              <img src={student}alt="" className=""/>
-            </div>
+        <div className=" row  mb-5 justify-content-center ">
+          <div className="cardStart col-12 col-md-8 col-lg-8 col-lg-o d-flex  justify-content-center align-item-center">
+               <div className="  col-6 ">
+                    <p className="textCardStart mt-5">¿Listo para poner a prueba lo aprendido?</p>
+                    <Button bsPrefix="buttonCardStart mt-3 mb-4" >Empezar</Button>
+                </div>
+                <div className="d-none d-sm-none d-md-block  col-6 ">
+                    <img src={student}alt="" className=""/>
+                </div>
           </div>
-
-        
-
+        </div>
         </div>{/*cierre Div container general */}
         <Footer/>
       </div>
