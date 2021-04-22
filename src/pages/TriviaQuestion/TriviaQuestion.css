@@ -1,0 +1,41 @@
+
+
+.contianer__trivia{
+    min-height: 600px;
+    height: 100%;
+}
+.wrap__info__trivia strong{
+    font-size: 2rem;
+    display: block;
+}
+.wrap__info__trivia span{
+    font-size: 1.5rem;
+}
+
+.wrap__img__question{
+    max-width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn__send__answer{
+    display: inline-flex;
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    background-color: #4459FE;
+    color: #FFFFFF;
+    align-items: center ;
+    transition: all linear .25s;
+}
+.btn__send__answer svg {
+    margin-left: 1rem;
+    transition: all linear .25s;
+}
+.btn__send__answer:hover{
+    color: #fff !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,.3);
+}
+.btn__send__answer:hover svg{
+    transform: translateX(8px);
+}
