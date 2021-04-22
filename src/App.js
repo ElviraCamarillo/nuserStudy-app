@@ -1,12 +1,12 @@
 import React, { Component } from  'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 
 import Home from './pages/Home/home'
 import HomePCE from './pages/HomePCE/homepce'
 import Login from './pages/Login/Login'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import TriviasPage from './pages/Trivias/trivias'
 import Singup from './pages/Singup/singup'
 
 export default class App extends Component{
@@ -38,6 +38,13 @@ export default class App extends Component{
             component={HomePCE}
           />
         </Switch>
+        <Switch>
+          <Route
+            exact path="/trivias"
+            component={TriviasPage}
+          />
+        </Switch>
+
       </div>
     </BrowserRouter>
 
