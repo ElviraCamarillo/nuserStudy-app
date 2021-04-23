@@ -1,6 +1,6 @@
 // Importar modulos
 import React, { Component } from 'react'
-//importar elementos de bootstra
+//importar elementos de bootstrap
 import { Button } from 'react-bootstrap'
 
 // Importar componentes
@@ -14,11 +14,6 @@ import './Error404.css'
 //Importar imagenes
 import sick from '../../img/img-Error404.svg'
 import arrowBtnError from '../../img/img-btn-error.svg'
-
-import flechaHorizontal from '../../img/img-btn-s1.svg'
-import arrowBtn from '../../img/flecha-vector-btn.svg'
-import laFlechaCard from '../../img/flecha-vector-card.svg'
-
 
 
 export default class Error extends Component {
@@ -47,12 +42,7 @@ export default class Error extends Component {
                     </div>
                 </div>
             </div>
-          
-
        </div>
-            
-       
-
         <Footer/>
       </div>
     )

@@ -1,21 +1,20 @@
 import React, { Component } from  'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 
 import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
+import TriviasPage from './pages/Trivias/trivias'
+import Singup from './pages/Singup/singup'
 import StagesPCE from './pages/StagesPCE/stagesPce'
 import ValorationDescription from './pages/ValorationDescription/valorationDescription'
-
 import Error from './pages/Error404/error404'
-
 import DiagnosisDescription from './pages/DiagnosisDescription/diagnosisDescription'
 import PlanningDescription from './pages/PanningDescription/planningDescription'
 import EjecutionDescription from './pages/ExecutionDescription/executionDescription'
 import EvaluationDescription from './pages/EvaluationDescription/evaluationDescription'
 
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
 
 export default class App extends Component{
   render(){
@@ -36,6 +35,9 @@ export default class App extends Component{
         </Switch>
         <Switch>
           <Route
+            exact path="/singup"
+            component={Singup}
+
             exact path="/pce"
             component={StagesPCE}
           />
@@ -68,6 +70,18 @@ export default class App extends Component{
           <Route
             exact path="/evaluacionTema"
             component={EvaluationDescription}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/trivias"
+            component={TriviasPage}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/error"
+            component={Error}
           />
         </Switch>
       </div>

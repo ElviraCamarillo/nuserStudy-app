@@ -113,10 +113,6 @@ export default class StagesPCE extends Component {
                 </div>
           </div>
         </div>
-            
-
-        
-
         </div>{/*cierre Div container general */}
         <Footer/>
       </div>
