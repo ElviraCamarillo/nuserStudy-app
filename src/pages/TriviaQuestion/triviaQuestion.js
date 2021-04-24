@@ -40,15 +40,15 @@ export default class TriviasQuestionPage extends Component {
                 
             </div>
             
-            <div className="mt-3 wrap__img__question">
+            {/* <div className="mt-3 wrap__img__question">
                 <img src={imageQuestion} alt="image question"/>
-            </div>
+            </div> */}
 
             {/* <TriviaQuestionOne/> */}
 
             <TriviaQuestionTwo/>
             {/* <ResponseError/> */}
-            {/* <ResponseSucess/> */}
+            <ResponseSucess/>
 
 
             <div className="row mb-5">
