@@ -92,16 +92,16 @@ export default class CreateUser extends Component {
       <div>
         <NavbarH/>
         <div className="container d-flex justify-content-center mt-3 mb-5 card_create_user">
-          <div className="row mb-4 ">
-            <div className="col-md-6 d-none d-md-block my-auto">
+          <div className="row mb-4 align-items-center pt-4">
+            <div className="col-md-6">
+              <img src={desktop} alt="" className="mb-4"/>
               <h2 class="">Registrate</h2>
               <p>Para ayudarte a mantener tú score</p>
-              <img src={imageCreateUser} alt=""/>
             </div>
             <div className="col-12 col-md-6">
-              <div className="mt-2">
+              <div className="">
                 {/* <div className="text_create_user mt-5 ">
-                  <img src={desktop} alt="" class="d-md-none" />
+                  <img src={desktop} alt="" class="" />
                   <h2 class="">Registrate</h2>
                   <p>Para ayudarte a mantener tú score</p>
                 </div> */}
@@ -110,7 +110,7 @@ export default class CreateUser extends Component {
                   onSubmit={this.onSubmit.bind(this)} 
                   action=''>
                   <Form.Group controlId="username">
-                    <Form.Label>Nickname</Form.Label>
+                    <Form.Label>Usuario</Form.Label>
                     <Form.Control type="text" placeholder="Ingrese su nickname" 
                       name="username"
                       onChange={this.handleInput.bind(this)}
@@ -118,7 +118,7 @@ export default class CreateUser extends Component {
                     />
                   </Form.Group>
                   <Form.Group controlId="fist_name">
-                    <Form.Label>Nombre:</Form.Label>
+                    <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" placeholder="Ingrese su nombre" 
                       name="first_name"
                       onChange={this.handleInput.bind(this)}
@@ -126,7 +126,7 @@ export default class CreateUser extends Component {
                     />
                   </Form.Group>
                   <Form.Group controlId="last_name">
-                    <Form.Label>Apellidos:</Form.Label>
+                    <Form.Label>Apellidos</Form.Label>
                     <Form.Control type="text" placeholder="Ingrese sus apellidos" 
                       name="last_name"
                       onChange={this.handleInput.bind(this)}
@@ -134,15 +134,15 @@ export default class CreateUser extends Component {
                     />
                   </Form.Group>
                   <Form.Group controlId="email">
-                    <Form.Label>Correo electrónico:</Form.Label>
-                    <Form.Control type="email" placeholder="Ingrese su correo eleactrónico" 
+                    <Form.Label>Correo electrónico</Form.Label>
+                    <Form.Control type="email" placeholder="mail@example.com" 
                       name="email"
                       onChange={this.handleInput.bind(this)}
                       autoComplete="off" 
                     />
                   </Form.Group>
                   <Form.Group controlId="password">
-                    <Form.Label>Contraseña:</Form.Label>
+                    <Form.Label>Contraseña</Form.Label>
                     <Form.Control type="password" placeholder="" 
                       name="password"
                       onChange={this.handleInput.bind(this)}
@@ -150,7 +150,7 @@ export default class CreateUser extends Component {
                     />
                   </Form.Group>
                   <Form.Group controlId="verifyPass-signin">
-                    <Form.Label>Verifica tu Contraseña:</Form.Label>
+                    <Form.Label>Verifica tu Contraseña</Form.Label>
                     <Form.Control type="password" placeholder="" 
                       name="verifyPass"
                       onChange={this.handleInput.bind(this)}
@@ -160,11 +160,10 @@ export default class CreateUser extends Component {
                   <p className={`response-message ${this.state.statusresponse}`}>{this.state.response}</p>
                   
                   <div className='d-flex flex-column justify-content-center align-items-start mt-4'>
-                    <Button className="" size="lg" type="submit">
+                    <Button className="submit_btn" type="submit">
                       Regístrate
                     </Button>
                   </div> 
-
                 </Form>
                 
 

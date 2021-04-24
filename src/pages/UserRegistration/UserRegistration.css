@@ -1,3 +1,28 @@
 .card_create_user{
     background-color: #F6FAFF;
 }
+
+.card_create_user label{
+    color: #444;
+    font-size: .875rem;
+    margin-bottom: 0.125rem;
+}
+
+.card_create_user input{
+    border: 2px solid #c8d4ff;
+    background-color: #f6faff;
+    font-size: .875rem;
+    outline: none;
+}
+
+.card_create_user input:focus{
+    border-color: #0a01cc;
+}
+.card_create_user .submit_btn{
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+}
