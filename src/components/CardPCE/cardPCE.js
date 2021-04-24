@@ -30,7 +30,6 @@ export default class CardPCEOne extends Component {
           </div>
             
         </div>
-            
       </div>
             
 		)

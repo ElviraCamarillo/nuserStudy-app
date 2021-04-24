@@ -10,10 +10,8 @@ import './DiagnosisDescription.css'
 
 //import images
 import elLogoCard from '../../img/logo-card-pce-1.svg'
-import iPhase1 from '../../img/img-phase-1.svg'
 import iPhase2 from '../../img/img-phase-2.svg'
 import iPhase3 from '../../img/img-phase-3.svg'
-import iPhase4 from '../../img/img-phase-4.svg'
 import iPhaseCard from '../../img/img-phases-start.svg'
 
 export default class DiagnosisDescription extends Component {

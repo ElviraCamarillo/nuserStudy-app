@@ -5,10 +5,10 @@ import { Button } from 'react-bootstrap'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
+import NavbarUser from '../../components/Navbar/navBarUser'
 import Footer from '../../components/footer/footer'
-import CardPCEOne from '../../components/CardPCE/cardPCE'
 import TituloPCE from '../../components/DTituloPCE/titulo-PCE'
-import DivBeneficios from '../../components/DivBeneficios/dBeneficios'
+
 
 
 // Import CSS
@@ -25,10 +25,7 @@ import logoCardDiagnosis from '../../img/logo-card-pce-2.svg'
 import logoCardEjecution from '../../img/logo-card-pce-3.svg'
 import logoCardPlanning from '../../img/logo-card-pce-4.svg'
 import logoCardEvaluation from '../../img/logo-card-pce-5.svg'
-import bgCardDiagnosis from '../../img/fondo-card-pce-2.svg'
-import bgCardEjecution from '../../img/fondo-card-pce-3.svg'
-import bgCardPlanning from '../../img/fondo-card-pce-4.svg'
-import bgCardEvaluation from '../../img/fondo-card-pce-5.svg'
+
 
 
 
@@ -41,6 +38,7 @@ export default class Home extends Component {
     return(
       <div className="">
         <NavbarH/>
+        <NavbarUser/>
         <div className = "container">
           <div className="row d-flex justify-content-center mt-5">
             <div className="col-12 col-md-6 mb-5 d-flex justify-content-start flex-column">
