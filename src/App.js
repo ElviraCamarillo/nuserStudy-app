@@ -6,7 +6,7 @@ import './App.css';
 import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
 import TriviasPage from './pages/Trivias/trivias'
-import Singup from './pages/Singup/singup'
+import CreateUser from './pages/UserRegistration/userRegistration'
 import StagesPCE from './pages/StagesPCE/stagesPce'
 import ValorationDescription from './pages/ValorationDescription/valorationDescription'
 import Error from './pages/Error404/error404'
@@ -33,11 +33,15 @@ export default class App extends Component{
             component={Login}
           />
         </Switch>
+
         <Switch>
           <Route
-            exact path="/singup"
-            component={Singup}
-
+            exact path="/singnin"
+            component={CreateUser}
+            />
+        </Switch>
+        <Switch>
+          <Route
             exact path="/pce"
             component={StagesPCE}
           />

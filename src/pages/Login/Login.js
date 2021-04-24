@@ -15,7 +15,7 @@ export default class Login extends Component {
     super(props)
     this.state = {
       email: '',
-      nameUser: '',
+      userName: '',
       imageUrlUser: '',
       response:'',
       statusreponse:''
@@ -62,7 +62,7 @@ export default class Login extends Component {
                 <h2 class="">Inicia sesión</h2>
                 <p>Para ayudarte a mantener tú score</p>
                 <GoogleLogin className=""
-                  clientId="27723578629-id19f9kqmbgv2p1f5doah7sf4a5h1t99.apps.googleusercontent.com"
+                  clientId={process.env.REACT_APP_CLIENTE_ID}
                   buttonText="Iniciar Sesión"
                   onSuccess={this.responseGoogle.bind(this)}
                   onFailure={this.responseGoogle.bind(this)}
