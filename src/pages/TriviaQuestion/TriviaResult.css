@@ -1,0 +1,22 @@
+.card__result{
+    padding: 2rem;
+    border-radius: 2.5rem;
+    background-color: #FEE3E0;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card__result h1{
+    color: #5E358F;
+    font-size: 2.5rem;
+}
+.card__result strong,
+.card__result strong b,
+.card__result p{
+    color: #000;
+    font-size: 2rem;
+}
+.card__result strong{
+    font-weight: 400;
+}

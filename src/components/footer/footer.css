@@ -1,0 +1,42 @@
+.footer{
+    background-color: #DDe8f7;
+}
+.colorBorder{
+    border: 1px solid blue;
+}
+.divLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divListas{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.divNurseApp{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.listImgRedes li{
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    align-items: center;
+}
+.listOpciones li{
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pNurse{
+    text-align: left;
+    padding-left: 150px;
+    padding-top: 0px;
+}
+.pimgComent{
+    text-align: right;
+    padding-right: 150px;
+}

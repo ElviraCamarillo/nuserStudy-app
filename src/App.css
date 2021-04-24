@@ -2,6 +2,63 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
-    background-color: e5e5e5;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+body{
+    background-color: #EFF3FC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container_main{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn__outline{
+    display: inline-flex;
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #4459FE;
+    align-items: center ;
+    transition: all linear .25s;
+    border: 1px solid #4459FE;
+    margin-right: .5rem;
+    margin-left: 0.5rem;
+}
+.btn__outline:hover{
+    color: #fff !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,.3);
+    background-color: #4459FE;
+}
+
+
+.btn__filled__arrow{
+    display: inline-flex;
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    background-color: #4459FE;
+    color: #FFFFFF;
+    align-items: center ;
+    transition: all linear .25s;
+    margin-right: .5rem;
+    margin-left: 0.5rem;
+}
+.btn__filled__arrow svg {
+    margin-left: 1rem;
+    transition: all linear .25s;
+}
+.btn__filled__arrow:hover{
+    color: #fff !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,.3);
+}
+.btn__filled__arrow:hover svg{
+    transform: translateX(8px);
 }

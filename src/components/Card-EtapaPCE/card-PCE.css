@@ -1,0 +1,18 @@
+
+.divCard{
+background-image: url("../../img//fondo-card-pce-1.svg");
+background-repeat: no-repeat, repeat;
+background-position: right;
+
+
+}
+.flechaVector{
+    padding-left: 10px;
+}
+.linkPCE{
+    font-family: Avenir;
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+color: #212353;
+}

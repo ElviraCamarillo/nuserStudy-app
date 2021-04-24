@@ -1,0 +1,22 @@
+
+.dTituloPCE{
+    text-align: center;
+}
+.elTituloPCE{
+    color: #2b5883;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 130%;
+/* or 52px */
+
+}
+.pPCE{
+    color:#4b5d68;
+    font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 160%;
+}

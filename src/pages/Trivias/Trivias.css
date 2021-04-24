@@ -1,0 +1,68 @@
+.card_trivia{
+    border: none;
+    border-radius: 2rem;
+}
+
+.card_trivia_img{
+    max-width: 7rem;
+}
+
+.card_trivia_title{
+    color: #183B67;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.card_trivia_text{
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+.card_trivia_pce{
+    background-color:#FFF4F2;
+}
+
+.card_trivia_valoration{
+    background-color:#E5F7ED;
+}
+
+.card_trivia_data{
+    background-color: #FFF3FC;
+}
+
+.card_trivia_observation{
+    background-color: #F3ECFE;
+}
+
+.card_trivia_interview{
+    background-color: #FFF6E9;
+}
+
+.card_trivia_exploration{
+    background-color: #E3F5FF;
+}
+
+.wrap_progress .progressBarCard{
+    border-radius:0.75rem ;
+    width: 5.18rem;
+    height: 0.6rem;
+}
+
+.wrap_progress.pce .progress-bar{
+    background-color: #6583FE;
+}
+
+.wrap_progress.valoration .progress-bar{
+    background-color: #25B9A9;
+}
+.wrap_progress.data .progress-bar{
+    background-color: #CF3DA6;
+}
+.wrap_progress.observation .progress-bar{
+    background-color: #9C69E2;
+}
+.wrap_progress.interview .progress-bar{
+    background-color: #FF5842;
+}
+.wrap_progress.exploration .progress-bar{
+    background-color: #00D6C6;
+}
