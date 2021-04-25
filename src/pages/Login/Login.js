@@ -1,13 +1,10 @@
-// Importar modulos
 import React, { Component } from 'react'
 import GoogleLogin from 'react-google-login';
 
-// Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
 import Api from '../../lib/api'
 
-// Import CSS
 import './Login.css'
 
 import imageLogin from '../../img/img_login.svg'

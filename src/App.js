@@ -65,7 +65,7 @@ export default class App extends Component{
         </Switch>
         <Switch>
           <Route
-            exact path="/EjecucionTema"
+            exact path="/ejecucionTema"
             component={EjecutionDescription}
           />
         </Switch>
@@ -109,8 +109,6 @@ export default class App extends Component{
         
       </div>
     </BrowserRouter>
-
-
     )
   }
 }
