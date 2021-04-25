@@ -1,19 +1,16 @@
-// Importar modulos
 import React, { Component } from 'react'
 import GoogleLogin from 'react-google-login';
 
-// Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
 import Api from '../../lib/api'
 
-// Import CSS
-import './Singup.css'
+import './Login.css'
 
 import imageLogin from '../../img/img_login.svg'
 import desktop from '../../img/desktop.svg'
 
-export default class Singup extends Component {
+export default class LoginGoogle extends Component {
   constructor (props){
     super(props)
     this.state = {
@@ -62,10 +59,10 @@ export default class Singup extends Component {
             <div className="col-12 col-md-6 text-center">
               <div className="container_text_login mt-5 mb-5">
                 <img src={desktop} alt="" class="" />
-                <h2 class="">Registrarse</h2>
+                <h2 class="">Inicia sesión</h2>
                 <p>Para ayudarte a mantener tú score</p>
                 <GoogleLogin className=""
-                  clientId="27723578629-id19f9kqmbgv2p1f5doah7sf4a5h1t99.apps.googleusercontent.com"
+                  clientId={process.env.REACT_APP_CLIENTE_ID}
                   buttonText="Iniciar Sesión"
                   onSuccess={this.responseGoogle.bind(this)}
                   onFailure={this.responseGoogle.bind(this)}

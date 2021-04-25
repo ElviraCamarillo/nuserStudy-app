@@ -1,0 +1,55 @@
+.card_create_user{
+    background-color: #F6FAFF;
+}
+
+.card_create_user label{
+    color: #444;
+    font-size: .875rem;
+    margin-bottom: 0.125rem;
+}
+
+.card_create_user input{
+    border: 2px solid #c8d4ff;
+    background-color: #f6faff;
+    font-size: .875rem;
+    outline: none;
+}
+
+.card_create_user input:focus{
+    border-color: #0a01cc;
+}
+.card_create_user .submit_btn{
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.response-message{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all linear .25s;
+  }
+  .response-message:empty{
+    padding: 0;
+    bottom: -2rem;
+  }
+  .response-message.success{
+    background-color: #29c7ac;
+  }
+  .response-message.error{
+    background-color: #84142d;
+  }
