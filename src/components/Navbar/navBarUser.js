@@ -24,9 +24,9 @@ export default class NavbarUser extends Component {
 							<NavDropdown className="button_pce" title="Proceso Cuidado Enfermero" id="basic-nav-dropdown">
 								<NavDropdown.Item href="/valoracionTema">Valoración</NavDropdown.Item>
 								<NavDropdown.Item href="/diagnosticoTema">Diagnóstico</NavDropdown.Item>
-								<NavDropdown.Item href="/evaluacionTema">Ejecución</NavDropdown.Item>
-                <NavDropdown.Item href="/planeacionTema">Planeación</NavDropdown.Item>
-                <NavDropdown.Item href="/evaluacionTema">Evaluación</NavDropdown.Item>
+								<NavDropdown.Item href="/ejecucionTema">Ejecución</NavDropdown.Item>
+								<NavDropdown.Item href="/planeacionTema">Planeación</NavDropdown.Item>
+								<NavDropdown.Item href="/evaluacionTema">Evaluación</NavDropdown.Item>
 							</NavDropdown>
 							
               				{/* <Nav.Link href="/logout" className="nav_style pl-2">Salir</Nav.Link> */}
