@@ -13,12 +13,7 @@ async function login (username, password) {
       })
       const payload = await response.json()
       console.log(payload)
-      if (payload.success === false) {
-        return payload
-      } else {
-        window.sessionStorage.setItem(
-          'authorization', payload.data.token
-        )
+      if (payload.token && payload.token !== "") {
         return payload
       }
     } catch (error) {

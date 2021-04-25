@@ -21,16 +21,15 @@ export default class Login extends Component {
       statusresponse:''
     }
   }
-  handleInput({ target: { username, value } }) {
-    
+  handleInput(event){
+    console.log(event)
     this.setState({
-        [username]: value
-    })        
+      [event.target.name]: event.target.value
+    })
   }
 
   async onSubmit(event){
     event.preventDefault()
-    console.log(this.props)
     const username = this.state.username
     const password = this.state.password
     if(username === "" || password === ""){
@@ -48,10 +47,11 @@ export default class Login extends Component {
     }
 
     const payload = await Api.login(username, password)
-    if(payload.sucess === true){
+    console.log(payload)
+    if(payload.token && payload.token !== ""){
       console.log('redirect to home')
-      localStorage.setItem('tokenapp', payload.data.token);
-      this.props.history.push(`/home`)
+      localStorage.setItem('tokenapp', payload.token);
+      this.props.history.push(`/`)
     }else{
       this.setState({
         response: 'Datos inválidos',
