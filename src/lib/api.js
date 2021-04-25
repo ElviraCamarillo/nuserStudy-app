@@ -1,13 +1,13 @@
-const API_URL = 'http://localhost:8000/'
+const API_URL = 'http://localhost:8000/api/'
 // const API_URL = {process.env.REACT_APP_URL}
 
-async function login (email, password) {
+async function login (username, password) {
     try {
-      const response = await window.fetch(`${API_URL}/auth/login`, {
+      const response = await window.fetch(`${API_URL}users/login/`, {
         headers: { 'Content-Type': 'application/json' },
         method: 'POST',
         body: JSON.stringify({
-          email: email,
+          username: username,
           password: password
         })
       })
@@ -35,22 +35,22 @@ async function login (email, password) {
 async function newUser (dataNewUSer) {
   try {
     console.log(dataNewUSer)
-    const response = await window.fetch(`${API_URL}/users/signup`, {
+    const response = await window.fetch(`${API_URL}users/create/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ ...dataNewUSer })
     })
-    console.log(response)
     const payload = await response.json()
+    console.log(payload)
     return payload
   } catch (error) {
     console.log('Error al crear nuevo usuario')
     console.log(error)
     return {
       data: {
-        newPost: ''
+        newUser: ''
       }
     }
   }
@@ -58,7 +58,7 @@ async function newUser (dataNewUSer) {
 
 async function getUserSession (token) {
   try {
-    const response = await window.fetch(`${API_URL}/users/getsession`, {
+    const response = await window.fetch(`${API_URL}/api-token-auth/`, {
       headers: { authorization: token }
     })
     const payload = await response.json()
@@ -72,4 +72,13 @@ async function getUserSession (token) {
     }
   }
 }
+
+
+const api = {
+  login,
+  newUser,
+  getUserSession
+}
+
+export default api
 

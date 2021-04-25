@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
+import Api from '../../lib/api'
 
 
 import './Login.css'
@@ -21,6 +22,7 @@ export default class Login extends Component {
     }
   }
   handleInput({ target: { username, value } }) {
+    
     this.setState({
         [username]: value
     })        
@@ -44,7 +46,26 @@ export default class Login extends Component {
       }, 4000)
       return
     }
+
+    const payload = await Api.login(username, password)
+    if(payload.sucess === true){
+      console.log('redirect to home')
+      localStorage.setItem('tokenapp', payload.data.token);
+      this.props.history.push(`/home`)
+    }else{
+      this.setState({
+        response: 'Datos inválidos',
+        statusresponse: 'error'
+      });
+      setTimeout(() => {
+        this.setState({
+          response: '',
+          statusresponse: ''
+        });
+      }, 4000)
+    }
   }
+
   render (){
     return(
       <div className="div">
@@ -64,14 +85,19 @@ export default class Login extends Component {
                     action=''>
                     <Form.Group controlId="username">
                       <Form.Label>Usuario</Form.Label>
-                      <Form.Control type="text" placeholder="Usuario" 
+                      <Form.Control 
+                        type="text" 
+                        placeholder="Usuario" 
                         name="username"
                         onChange={ this.handleInput.bind(this) }
+                        autoComplete="off" 
                       />
                     </Form.Group>
                     <Form.Group controlId="password">
                       <Form.Label>Contraseña</Form.Label>
-                      <Form.Control type="password" placeholder="" 
+                      <Form.Control 
+                        type="password" 
+                        placeholder="" 
                         name="password"
                         onChange={ this.handleInput.bind(this) }
                       />

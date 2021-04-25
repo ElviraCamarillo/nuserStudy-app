@@ -7,11 +7,9 @@ import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
 import Api from '../../lib/api'
 
-
 // Import CSS
 import './UserRegistration.css'
 
-import imageCreateUser from '../../img/img-nurse-dbeneficios.svg'
 import desktop from '../../img/desktop.svg'
 
 export default class CreateUser extends Component {
@@ -20,8 +18,8 @@ export default class CreateUser extends Component {
     super(props)
     this.state = {
       username: '',
+      first_name:'',
       last_name: '',
-      fisrt_name:'',
       email: '',
       password: '',
       ispassok: true,
@@ -29,22 +27,39 @@ export default class CreateUser extends Component {
       statusresponse: ''
     }
   }
-  handleInput({ target:{ name, value }}){
+  handleInput(event){
+    console.log(event)
+    console.log(event.target.value)
+    console.log(event.target.name)
     this.setState({
-      [name]: value
+      [event.target.name]: event.target.value
     })
   }
   async onSubmit (event) {
+    console.log(event)
     event.preventDefault()
-    const fist_name = this.state.first_name
     const username = this.state.username
-    const last_Name = this.state.last_name
+    const first_name = this.state.first_name
+    const last_name = this.state.last_name
     const email = this.state.email
     const password = this.state.password
     const verifypassword = this.state.verifyPass
-    console.log(this.props)
-    if(verifypassword !== password) {
-      // si pass no coinciden
+    console.log(username,first_name,last_name)
+    if(username === "" || first_name === "" || last_name === "" || email === "" || password === "") {
+      console.log('Campos vacios')
+      this.setState({
+        ispassok: false,
+        response: 'No deben existir campos vacios',
+        statusresponse: 'error'
+      });
+      setTimeout(() => {
+        this.setState({
+          ispassok: true,
+          response: '',
+          statusresponse: ''
+        });
+      }, 4000)
+    }else if(verifypassword !== password) {
       console.log('password no coinciden')
       this.setState({
         ispassok: false,
@@ -58,12 +73,10 @@ export default class CreateUser extends Component {
           statusresponse: ''
         });
       }, 4000)
-
     }else{
-      // si todo ok
-      const payload = await Api.newUser({fist_name, last_Name, email, password, username})
+      const payload = await Api.newUser({username, first_name, last_name, email, password})
       console.log(payload)
-      if(payload.success === true){
+      if(payload.email){
         this.setState({
           response: 'Usuario registrado correctamente',
           statusresponse: 'success'
@@ -72,23 +85,39 @@ export default class CreateUser extends Component {
           this.props.history.push(`/login`)
         }, 5000)
       }else{
-        this.setState({
-          response: payload.error,
-          statusresponse: 'error'
-        });
-        setTimeout(() => {
+        if(payload.username[0].includes("username already exists")) {
+          
           this.setState({
-            response: '',
-            statusresponse: ''
+            response: "El usuario seleccionado ya esta registrado",
+            statusresponse: 'error'
           });
-        }, 4000)
+          setTimeout(() => {
+            this.setState({
+              response: '',
+              statusresponse: ''
+            });
+          }, 4000)
+        }
+        if(payload.username[0].includes("Enter a valid username")) {
+          
+          this.setState({
+            response: "El usuario debe contener letras, numeros, @, ., +, -, _, sin espacios",
+            statusresponse: 'error'
+          });
+          setTimeout(() => {
+            this.setState({
+              response: '',
+              statusresponse: ''
+            });
+          }, 4000)
+        }
       }
     }
   }
   
-
   render (){
     return(
+
       <div>
         <NavbarH/>
         <div className="container d-flex justify-content-center mt-3 mb-5 card_create_user">
@@ -101,18 +130,20 @@ export default class CreateUser extends Component {
             <div className="col-12 col-md-6">
               <div className="">
                 <Form
-                  className='signin-form mt-4' 
+                  className='mt-4' 
                   onSubmit={this.onSubmit.bind(this)} 
                   action=''>
                   <Form.Group controlId="username">
                     <Form.Label>Usuario</Form.Label>
-                    <Form.Control type="text" placeholder="Ingrese su nickname" 
+                    <Form.Control 
+                      type="text" 
+                      placeholder="Ingrese su usuario" 
                       name="username"
                       onChange={this.handleInput.bind(this)}
                       autoComplete="off" 
                     />
                   </Form.Group>
-                  <Form.Group controlId="fist_name">
+                  <Form.Group controlId="first_name">
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control type="text" placeholder="Ingrese su nombre" 
                       name="first_name"
@@ -144,7 +175,7 @@ export default class CreateUser extends Component {
                       autoComplete="off" 
                     />
                   </Form.Group>
-                  <Form.Group controlId="verifyPass-signin">
+                  <Form.Group controlId="verifyPass">
                     <Form.Label>Verifica tu Contraseña</Form.Label>
                     <Form.Control type="password" placeholder="" 
                       name="verifyPass"

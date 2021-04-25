@@ -26,3 +26,30 @@
     justify-content: center;
     font-weight: 600;
 }
+
+.response-message{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all linear .25s;
+  }
+  .response-message:empty{
+    padding: 0;
+    bottom: -2rem;
+  }
+  .response-message.success{
+    background-color: #29c7ac;
+  }
+  .response-message.error{
+    background-color: #84142d;
+  }
