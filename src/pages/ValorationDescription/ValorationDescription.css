@@ -1,9 +1,30 @@
-.ImgPhaseOne{
-    
+.ImgPhaseOne{ 
     min-width: 214px;
     min-height: 199px;
 }
 .cardStartValoration {
     background-color: #B4E1BF;
     border-radius:32px ;
+}
+
+@media screen and (max-width: 640px){
+    .ImgPhaseOne{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 150px;
+        min-width: 150px;
+        min-height: auto;
+    }
+    .divCardValoration h2{
+        font-size: 1.5rem;
+    }
+    .divCardValoration p{
+        font-size: 0.875rem;
+    }
+
+    .divCardPhase img{
+        max-width: 120px;
+        margin-top: 0 !important;
+    }
 }

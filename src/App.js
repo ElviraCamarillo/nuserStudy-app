@@ -46,7 +46,7 @@ export default class App extends Component{
 
         <Switch>
           <Route
-            exact path="/singnin"
+            exact path="/signup"
             component={CreateUser}
             />
         </Switch>

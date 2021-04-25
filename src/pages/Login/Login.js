@@ -110,7 +110,7 @@ export default class Login extends Component {
                     </div>
                     <div className='d-flex flex-column justify-content-center align-items-center mt-2'>
                       <p className='noAccount'>¿Aún no tienes cuenta?</p>
-                      <Link to='/singnin' className="">Regístrate</Link>
+                      <Link to='/signup' className="">Regístrate</Link>
                     </div> 
                   </Form>
                 </div>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
+import NavbarUser from '../../components/Navbar/navBarUser'
 import Footer from '../../components/footer/footer'
 
 // Import CSS
@@ -17,17 +18,35 @@ import iPhase4 from '../../img/img-phase-4.svg'
 import iPhaseCard from '../../img/img-phases-start.svg'
 
 export default class ValorationDescription extends Component {
+  constructor(props){
+    super (props)
+  }
+  checkStart(event){
+    const token =  localStorage.getItem('tokenapp')
+    if(!token){
+      this.props.history.push(`/login`)
+    } else {
+      this.props.history.push(`/trivias`)
+    }
+  }
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
       <div className="">
-        <NavbarH/>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
         <div className="container">
 
               <div className="row divCardValoration mb-5 mt-5">
-                <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
+                <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
                   <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
                 </div>
-                <div className="col-6 col-md-9">
+                <div className="col-12 col-md-9">
                   <h2 className="mt-4 mb-4">Valoración</h2>
                   <p className="">
                     La Valoración es la Recogida, organización, validación y registro de los datos,
@@ -42,7 +61,7 @@ export default class ValorationDescription extends Component {
               <h1>Fases</h1>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-md-3 mt-md-4 mt-lg-0">
+                          <div className=" d-md-block col-12 d-3 mt-md-4 mt-lg-0">
                               <img src={iPhase1} alt="" className=" elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -69,7 +88,7 @@ export default class ValorationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className=" d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -87,7 +106,7 @@ export default class ValorationDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className=" d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="  d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -102,7 +121,7 @@ export default class ValorationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className=" d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -117,10 +136,7 @@ export default class ValorationDescription extends Component {
                   <div className="cardStartValoration col-12 col-md-8  d-flex  justify-content-center align-item-center">
                       <div className=" col-6">
                             <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
-                            
-                            <Button bsPrefix="buttonCardStart mt-3 mb-3"  >Empezar</Button>
-                            
-                            
+                            <Button bsPrefix="buttonCardStart mt-3 mb-3" onClick={this.checkStart.bind(this)}>Empezar</Button>
                       </div>
                       <div className="d-none d-sm-none d-md-block col-6 ">
                             <img src={iPhaseCard}alt="" className=""/>

@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
+import NavbarUser from '../../components/Navbar/navBarUser'
 import Footer from '../../components/footer/footer'
 
 // Import CSS
@@ -14,16 +15,23 @@ import iExecution2 from '../../img/nursing.svg'
 
 export default class ExecutionDescription extends Component {
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
       <div className="">
-        <NavbarH/>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
         <div className="container">
 
               <div className="row divCardValoration mb-5 ">
-                <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
+                <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
                   <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
                 </div>
-                <div className="col-6 col-md-9">
+                <div className="col-12 col-md-9">
                   <h2 className="mt-4 mb-4">Ejecución</h2>
                   <p className="">
                   Es la cuarta etapa del proceso de enfermería la cual está enfocada en el inicio de aquellas 
@@ -35,7 +43,7 @@ export default class ExecutionDescription extends Component {
               </div>
               
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iExecution} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
@@ -58,7 +66,7 @@ export default class ExecutionDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iExecution2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
