@@ -17,8 +17,8 @@ export default class NavbarH extends Component {
 					<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 					<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 						<Nav className="d-flex">
-							<Nav.Link href="login" className="nav_style pl-2">Iniciar sesión</Nav.Link>
-							<Nav.Link href="singnin" className="nav_style pl-2">Registro</Nav.Link>
+							<Nav.Link href="/login" className="nav_style pl-2">Iniciar sesión</Nav.Link>
+							<Nav.Link href="/signup" className="nav_style pl-2">Registro</Nav.Link>
 							<NavDropdown className="button_pce" title="Proceso Cuidado Enfermero" id="basic-nav-dropdown">
 								<NavDropdown.Item href="/valoracionTema">Valoración</NavDropdown.Item>
 								<NavDropdown.Item href="/diagnosticoTema">Diagnóstico</NavDropdown.Item>

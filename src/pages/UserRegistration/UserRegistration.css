@@ -63,3 +63,21 @@
   .response-message.error{
     background-color: #84142d;
   }
+  @media screen and (max-width: 640px){
+    .card_create_user{
+      width: calc(100% - 32px);
+    }
+    .card_create_user img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    .card_create_user h2{
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .card_create_user p{
+      text-align: center;
+    }
+  }

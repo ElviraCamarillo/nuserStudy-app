@@ -1,6 +1,7 @@
 // Importar modulos
 import React, { Component } from 'react'
 import { Form, Button } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
@@ -190,6 +191,11 @@ export default class CreateUser extends Component {
                       Regístrate
                     </Button>
                   </div> 
+
+                  <div className='d-flex flex-column justify-content-center align-items-center mt-2'>
+                      <p className='noAccount'>¿Ya tienes  cuenta?</p>
+                      <Link to='/login' className="">Inicia sesión</Link>
+                  </div>
                 </Form>
                 
 
