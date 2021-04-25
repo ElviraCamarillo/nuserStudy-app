@@ -100,11 +100,6 @@ export default class CreateUser extends Component {
             </div>
             <div className="col-12 col-md-6">
               <div className="">
-                {/* <div className="text_create_user mt-5 ">
-                  <img src={desktop} alt="" class="" />
-                  <h2 class="">Registrate</h2>
-                  <p>Para ayudarte a mantener tú score</p>
-                </div> */}
                 <Form
                   className='signin-form mt-4' 
                   onSubmit={this.onSubmit.bind(this)} 
@@ -171,6 +166,7 @@ export default class CreateUser extends Component {
             </div>
           </div>
         </div>
+        
         <Footer/>
       </div>
     )
