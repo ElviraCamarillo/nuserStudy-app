@@ -64,7 +64,7 @@ export default class Login extends Component {
                     action=''>
                     <Form.Group controlId="username">
                       <Form.Label>Usuario</Form.Label>
-                      <Form.Control type="text" placeholder="Ingrese su nickname" 
+                      <Form.Control type="text" placeholder="Usuario" 
                         name="username"
                         onChange={ this.handleInput.bind(this) }
                       />
@@ -86,7 +86,6 @@ export default class Login extends Component {
                       <p className='noAccount'>¿Aún no tienes cuenta?</p>
                       <Link to='/singnin' className="">Regístrate</Link>
                     </div> 
-
                   </Form>
                 </div>
               </div>
