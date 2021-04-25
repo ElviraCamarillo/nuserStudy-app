@@ -1,6 +1,5 @@
 // Importar modulos
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
@@ -10,11 +9,8 @@ import './EvaluationDescription.css'
 
 //import images
 import elLogoCard from '../../img/logo-card-pce-1.svg'
-import iPhase1 from '../../img/img-phase-1.svg'
-import iPhase2 from '../../img/img-phase-2.svg'
-import iPhase3 from '../../img/img-phase-3.svg'
-import iPhase4 from '../../img/img-phase-4.svg'
-import iPhaseCard from '../../img/img-phases-start.svg'
+import iEvaluation from '../../img/blood.svg'
+import iEvaluation2 from '../../img/medical.svg'
 
 export default class EvaluationDescription extends Component {
   render(){
@@ -38,55 +34,36 @@ export default class EvaluationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className="elLogoCard p-2 mt-4"/>
-                          </div>
-                          <div className="col-12 col-md-9 mt-4">
-                              <p >
-                              Es la valoración de las respuestas del paciente a las intervenciones enfermeras y la comparación 
-                              de las respuestas con los objetivos que se redactaron en la planeación.
-                              </p>
-                              
-                            </div>
+                  <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                      <img src={iEvaluation} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
+                  </div>
+                  <div className="col-12 col-md-9 mt-4">
+                      <p >
+                      Es la valoración de las respuestas del paciente a las intervenciones enfermeras y la comparación 
+                      de las respuestas con los objetivos que se redactaron en la planeación.
+                      </p>
+                      
+                    </div>
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4"/>
-                          </div>
-                          <div className="col-12 col-md-9 mt-4">
-                              <p> 
-                              Evaluación de las respuestas del paciente:
-                              </p> 
-                              <p>Identificar la valoración esperada</p>  
-                              <p>Obtener datos relacionados con la evolución esperada</p>
-                              <p>Comparar los datos con la evolución esperada</p>      
-                              <p>Relacionar las acciones de enfermería con la evolución del paciente</p>  
-                              <p>Obtener conclusiones sobre el estado del problema</p>     
-                              <p>Revisar y modificar el plan de cuidados del paciente</p> 
-                              <p>La evaluación se establecerá con respecto a la puntuación obtenida en la evaluación</p> 
-                            </div>
+                  <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
+                      <img src={iEvaluation2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
+                  </div>
+                  <div className="col-12 col-md-9 mt-4">
+                      <p> 
+                      Evaluación de las respuestas del paciente:
+                      </p> 
+                      <p>Identificar la valoración esperada</p>  
+                      <p>Obtener datos relacionados con la evolución esperada</p>
+                      <p>Comparar los datos con la evolución esperada</p>      
+                      <p>Relacionar las acciones de enfermería con la evolución del paciente</p>  
+                      <p>Obtener conclusiones sobre el estado del problema</p>     
+                      <p>Revisar y modificar el plan de cuidados del paciente</p> 
+                      <p>La evaluación se establecerá con respecto a la puntuación obtenida en la evaluación</p> 
+                    </div>
               </div>
        
-              
-
-              
-      
-              <div className=" row  mb-5 justify-content-center">
-                  <div className="cardStart col-12 col-md-8  d-flex  justify-content-center align-item-center">
-                      <div className=" col-6">
-                            <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
-                            
-                            <Button bsPrefix="buttonCardStart mt-3 mb-3"  >Empezar</Button>
-                            
-                            
-                      </div>
-                      <div className="d-none d-sm-none d-md-block col-6 ">
-                            <img src={iPhaseCard}alt="" className=""/>
-                      </div>
-                  </div>
-              </div>
-
                 
           </div>{/*cierre Div container general */}
           <Footer/>

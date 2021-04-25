@@ -1,6 +1,5 @@
 // Importar modulos
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
@@ -10,9 +9,14 @@ import './DiagnosisDescription.css'
 
 //import images
 import elLogoCard from '../../img/logo-card-pce-1.svg'
+
+import iDiagnosis from '../../img/bacteria.svg'
+import iDiagnosis2 from '../../img/health-report.svg'
+
 import iPhase2 from '../../img/img-phase-2.svg'
 import iPhase3 from '../../img/img-phase-3.svg'
 import iPhaseCard from '../../img/img-phases-start.svg'
+
 
 export default class DiagnosisDescription extends Component {
   render(){
@@ -38,7 +42,7 @@ export default class DiagnosisDescription extends Component {
               
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iDiagnosis} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-6 col-md-9 mt-4">
                             <p >
@@ -54,7 +58,7 @@ export default class DiagnosisDescription extends Component {
        
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iDiagnosis2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
                               <p >
@@ -73,22 +77,6 @@ export default class DiagnosisDescription extends Component {
               </div>
 
             
-      
-              <div className=" row  mb-5 justify-content-center">
-                  <div className="cardStart col-12 col-md-8 d-flex  justify-content-center align-item-center">
-                      <div className=" col-6">
-                            <p className="textCardStart mt-4">¿Listo para poner a prueba lo aprendido?</p>
-                            
-                            <Button bsPrefix="buttonCardStart mt-3 mb-3 "  >Empezar</Button>
-                            
-                            
-                      </div>
-                      <div className="d-none d-sm-none d-md-block col-6 ">
-                            <img src={iPhaseCard}alt="" className=""/>
-                      </div>
-                  </div>
-              </div>
-
                 
           </div>{/*cierre Div container general */}
           <Footer/>

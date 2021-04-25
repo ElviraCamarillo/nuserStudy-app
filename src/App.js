@@ -14,6 +14,9 @@ import DiagnosisDescription from './pages/DiagnosisDescription/diagnosisDescript
 import PlanningDescription from './pages/PanningDescription/planningDescription'
 import EjecutionDescription from './pages/ExecutionDescription/executionDescription'
 import EvaluationDescription from './pages/EvaluationDescription/evaluationDescription'
+import TriviasValorationPage from './pages/TriviaValoration/triviaValoration'
+import TriviasQuestionPage from './pages/TriviaQuestion/triviaQuestion'
+import TriviasResultPage from './pages/TriviaQuestion/triviaResult'
 
 
 export default class App extends Component{
@@ -88,8 +91,29 @@ export default class App extends Component{
             component={Error}
           />
         </Switch>
+        <Switch>
+          <Route
+            exact path="/tvaloration"
+            component={TriviasValorationPage}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/question"
+            component={TriviasQuestionPage}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/question/result"
+            component={TriviasResultPage}
+          />
+        </Switch>
+        
+        
       </div>
     </BrowserRouter>
     )
   }
 }
+
