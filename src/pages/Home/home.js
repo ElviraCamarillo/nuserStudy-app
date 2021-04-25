@@ -35,10 +35,18 @@ export default class Home extends Component {
   }
 
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
       <div className="">
-        <NavbarH/>
-        <NavbarUser/>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
+        {/* <NavbarH/>
+        <NavbarUser/> */}
         <div className = "container">
           <div className="row d-flex justify-content-center mt-5">
             <div className="col-12 col-md-6 mb-5 d-flex justify-content-start flex-column">
@@ -51,25 +59,30 @@ export default class Home extends Component {
             </div>
           </div>
           <TituloPCE/>
-          <div className="row divCardValoration mb-5 ">
-            <div className="col-6 col-md-3 mt-md-4 mt-lg-0">
-              <img src={logoCardValoration} alt="" className="elLogoCard p-2"/>
-            </div>
-            <div className="col-6 col-md-9">
-              <h2 className="mt-4 mb-4">Valoración</h2>
-              <p className="">
-                Recolección de datos, organización, ponderación y registro de los datos sobre <br/>el estado de salud del paciente
-              </p>
-              <a className="linkPCE mb-2" href="/valoracionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+          <div className="row list_stages">
+            <div className="col-12">
+
+              <div className="row mb-5 card_container_stage valoration">
+                <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
+                  <img src={logoCardValoration} alt="" className="elLogoCard p-2"/>
+                </div>
+                <div className="col-12 col-md-9 card_info_stage ">
+                  <h2 className="mt-4 mb-4">Valoración</h2>
+                  <p className="">
+                    Recolección de datos, organización, ponderación y registro de los datos sobre <br/>el estado de salud del paciente
+                  </p>
+                  <a className="linkPCE mb-2" href="/valoracionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center">
-              <div className=" col-12 col-lg-6 d-flex justify-content-between mb-5 p-3">
+          <div className="row d-flex justify-content-center list_stages">
+              <div className=" col-12 col-lg-6 d-flex justify-content-between mb-5 p-3 card_container_stage diagnosis">
                 <div className="my-auto mr-4">
                   <img src={logoCardDiagnosis} alt="" className="logoCardDiagnostic p-2"/>
                 </div>
-                <div className="divCardContent divCardDiagnosis flex-column">
+                <div className="flex-column card_info_stage ">
                   <h2 className="mt-4 mb-4">Diagnóstico</h2>
                   <p className="">
                     Consiste en la identificación de los problemas reales y potenciales, así como los recursos con los que cuenta el 
@@ -79,32 +92,28 @@ export default class Home extends Component {
                 </div>
               </div>
 
-              <div className="divCardPlanning col-12 col-lg-6 d-flex justify justify-content-between mb-5">
+              <div className=" col-12 col-lg-6 d-flex justify justify-content-between mb-5 card_container_stage planning">
                   <div className="my-auto mr-4">
                     <img src={logoCardPlanning} alt="" className="logoCardDiagnostic"/>
                   </div>
-
-
-                  <div className=" flex-column">
+                  <div className=" flex-column card_info_stage ">
                     <h2 className="mt-4 mb-4">Planeación</h2>
                     <p className="">
                     Comprende la serie de pasos con los que la enfermera y el paciente establecen las prioridades y los objetivos para
                     revolver o disminuir los problemas detectados en el paciente.
                     </p>
                     <a href= ""className="linkPCE mb-2" href="/planeacionTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
-                </div>
-
+                  </div>
               </div>
 
             </div>
        
-        <div className="row">
-          <div className="divCardEjecution col-12 col-lg-6 d-flex justify-content-between mb-5 ">
+        <div className="row list_stages">
+          <div className="col-12 col-lg-6 d-flex justify-content-between mb-5 card_container_stage execution">
             <div className="my-auto mr-4">
               <img src={logoCardEjecution} alt="" className="logoCardDiagnostic"/>
             </div>
-
-            <div className=" flex-column">
+            <div className=" flex-column card_info_stage ">
               <h2 className="mt-4 mb-4">Ejecución</h2>
               <p className="">
               Es la practica del plan de cuidados de enfermería y finaliza con el registro de los cuidados prestados y las respuestas 
@@ -116,11 +125,11 @@ export default class Home extends Component {
           </div>
 
           
-          <div className=" col-12 col-lg-6 d-flex justify-content-between mb-5">
+          <div className=" col-12 col-lg-6 d-flex justify-content-between mb-5 card_container_stage evaluation">
             <div className=" my-auto mr-4">
               <img src={logoCardEvaluation} alt="" className="logoCardDiagnostic"/>
             </div>
-            <div className="divCardEvaluation flex-column">
+            <div className="divCardEvaluation flex-column card_info_stage ">
               <h2 className="mt-4 mb-4">Evaluación</h2>
               <p className="">
               Es la valoración de las respuestas del paciente a las intervenciones enfermeras y la comparación de las respuestas con los objetivos 
@@ -132,14 +141,19 @@ export default class Home extends Component {
 
         </div>
          {/*separador */}
-        <div className="row">
-          <div className="dRegistroPCE col-12 mt-5 text-center">
-            <h2 className="mb-4">Click aquí para registrarte</h2>
-            <Button href="" bsPrefix="buttonHome p-2">Crear Cuenta
-            <img src={arrowBtn}alt="" className="vectorBtn"/>
-            </Button>
+        {
+        token === null ?
+          <div className="row">
+            <div className="dRegistroPCE col-12 mt-5 text-center">
+              <h2 className="mb-4">Click aquí para registrarte</h2>
+                <Button href="/signin" bsPrefix="buttonHome p-2">Crear Cuenta
+                <img src={arrowBtn}alt="" className="vectorBtn"/>
+                </Button>
+                
+            </div>
           </div>
-        </div>
+        : ''
+        }
 
         <div className="container ">
           <div className="row d-flex justify-content-center mt-5">

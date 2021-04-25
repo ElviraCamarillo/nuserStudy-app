@@ -9,6 +9,8 @@ body{
     background-color: #EFF3FC;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(180deg, #DDE8F7 0%, #FFFFFF 63.06%) no-repeat;
+    min-height: 100vh;
 }
 
 img{

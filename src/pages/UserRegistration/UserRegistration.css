@@ -1,5 +1,15 @@
 .card_create_user{
     background-color: #F6FAFF;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card_create_user img{
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card_create_user label{

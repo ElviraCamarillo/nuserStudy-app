@@ -120,9 +120,9 @@ export default class CreateUser extends Component {
 
       <div>
         <NavbarH/>
-        <div className="container d-flex justify-content-center mt-3 mb-5 card_create_user">
+        <div className="container d-flex justify-content-center mt-5 mb-5 card_create_user">
           <div className="row mb-4 align-items-center pt-4">
-            <div className="col-md-6">
+            <div className="col-md-6 text-center">
               <img src={desktop} alt="" className="mb-4"/>
               <h2 class="">Registrate</h2>
               <p>Para ayudarte a mantener tú score</p>

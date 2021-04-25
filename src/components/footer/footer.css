@@ -1,5 +1,7 @@
 .footer{
     background-color: #DDe8f7;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 .colorBorder{
     border: 1px solid blue;
@@ -15,28 +17,40 @@
     text-align: center;
 }
 .divNurseApp{
-    margin: 1rem;
+    margin: 0;
     padding: 1rem;
     text-align: center;
 }
+.divNurseApp p{
+    margin-bottom: 0;
+}
 .listImgRedes li{
-    display: inline;
+    display: inline-block;
     padding-left: 3px;
     padding-right: 3px;
     align-items: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.listOpciones{
+    margin-bottom: 0;
 }
 .listOpciones li{
-    display: inline;
+    display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 0.5rem;
 }
 
-.pNurse{
-    text-align: left;
-    padding-left: 150px;
-    padding-top: 0px;
-}
 .pimgComent{
     text-align: right;
-    padding-right: 150px;
+}
+
+.title_footer{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.listOpciones,
+.listImgRedes{
+    padding-left: 0;
 }

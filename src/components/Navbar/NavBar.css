@@ -3,6 +3,8 @@
     border: solid 1px #FFFFFF;
     font-size: 14px;
     background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-left: 1rem;
 }
 
 .nav_style{
@@ -15,4 +17,37 @@
 
 .img_nav{
     background-color: #FFFFFF;
+}
+.button_pce  .dropdown-toggle {
+    font-size: 0.875rem;
+    padding-right: 1rem;
+}
+.button_pce .dropdown-menu{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    top: 130%;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    transition: all linear 0.3s;
+}
+.button_pce .dropdown-menu a{
+    font-size: .875rem;
+}
+.button_pce .dropdown-menu:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border-bottom: 10px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.button_pce + a{
+    margin-left: 1rem;
+    color: rgba(0,0,0,.5);
+    align-items: center;
+    display: flex;
 }

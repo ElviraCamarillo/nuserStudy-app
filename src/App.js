@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './pages/Home/home'
 import Login from './pages/Login/Login'
+import Logout from './pages/LogOut/index'
 import TriviasPage from './pages/Trivias/trivias'
 import CreateUser from './pages/UserRegistration/userRegistration'
 import StagesPCE from './pages/StagesPCE/stagesPce'
@@ -34,6 +35,12 @@ export default class App extends Component{
           <Route
             exact path="/login"
             component={Login}
+          />
+        </Switch>
+        <Switch>
+          <Route
+            exact path="/logout"
+            component={Logout}
           />
         </Switch>
 
