@@ -19,11 +19,10 @@ export default class NavbarH extends Component {
 						<Nav className="d-flex">
 							<Nav.Link href="login" className="nav_style pl-2">Iniciar sesión</Nav.Link>
 							<Nav.Link href="singnin" className="nav_style pl-2">Registro</Nav.Link>
-              	{/* <Nav.Link href="pce" className="button_pce pl-2" >Proceso Cuidado Enfermero <img src={arrow} className="img_nav"/></Nav.Link> */}
-							  <NavDropdown className="button_pce" title="Proceso Cuidado Enfermero" id="basic-nav-dropdown">
+							<NavDropdown className="button_pce" title="Proceso Cuidado Enfermero" id="basic-nav-dropdown">
 								<NavDropdown.Item href="/valoracionTema">Valoración</NavDropdown.Item>
 								<NavDropdown.Item href="/diagnosticoTema">Diagnóstico</NavDropdown.Item>
-								<NavDropdown.Item href="/evaluacionTema">Ejecución</NavDropdown.Item>
+								<NavDropdown.Item href="/ejecucionTema">Ejecución</NavDropdown.Item>
 								<NavDropdown.Item href="/planeacionTema">Planeación</NavDropdown.Item>
 								<NavDropdown.Item href="/evaluacionTema">Evaluación</NavDropdown.Item>
 							</NavDropdown>
