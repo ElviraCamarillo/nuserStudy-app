@@ -1,6 +1,5 @@
 // Importar modulos
 import React, { Component } from 'react'
-import {Card, CardDeck, ProgressBar} from 'react-bootstrap'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'

@@ -14,10 +14,6 @@ import elLogoCard from '../../img/logo-card-pce-1.svg'
 import iDiagnosis from '../../img/bacteria.svg'
 import iDiagnosis2 from '../../img/health-report.svg'
 
-import iPhase2 from '../../img/img-phase-2.svg'
-import iPhase3 from '../../img/img-phase-3.svg'
-import iPhaseCard from '../../img/img-phases-start.svg'
-
 
 export default class DiagnosisDescription extends Component {
   render(){
