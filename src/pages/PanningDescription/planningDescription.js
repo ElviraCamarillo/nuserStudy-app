@@ -35,7 +35,7 @@ export default class PlanningDescription extends Component {
 
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iDescription} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iDescription} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
                               <p >
@@ -49,8 +49,8 @@ export default class PlanningDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
+                          <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0 ">
+                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
                               <p >

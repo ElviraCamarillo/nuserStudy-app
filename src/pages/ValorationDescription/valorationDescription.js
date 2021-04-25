@@ -10,7 +10,6 @@ import './ValorationDescription.css'
 
 //import images
 import elLogoCard from '../../img/logo-card-pce-1.svg'
-import student from '../../img/reading.svg'
 import iPhase1 from '../../img/img-phase-1.svg'
 import iPhase2 from '../../img/img-phase-2.svg'
 import iPhase3 from '../../img/img-phase-3.svg'
@@ -44,7 +43,7 @@ export default class ValorationDescription extends Component {
 
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className=" elLogoCard p-2 mt-4"/>
+                              <img src={iPhase1} alt="" className=" elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">1-Obtención de datos</h3>
@@ -71,7 +70,7 @@ export default class ValorationDescription extends Component {
 
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">2-Validación de datos</h3>
@@ -89,7 +88,7 @@ export default class ValorationDescription extends Component {
        
               <div className="row divCardPhase mb-5">
                           <div className=" d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">3-Organización de datos</h3>
@@ -104,7 +103,7 @@ export default class ValorationDescription extends Component {
 
               <div className="row divCardPhase mb-5">
                           <div className="d-none d-sm-none d-md-block col-6 col-md-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4"/>
+                              <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">4-Registro de datos</h3>
