@@ -17,9 +17,6 @@ import arrowBtnError from '../../img/img-btn-error.svg'
 
 
 export default class Error extends Component {
-  constructor(props){
-    super(props)
-  }
 
   render(){
     return(

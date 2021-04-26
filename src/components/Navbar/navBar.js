@@ -4,7 +4,6 @@ import './NavBar.css';
 
 //Importar imagenes
 import logo from '../../img/logo.svg'
-import arrow from '../../img/arrow.svg'
 
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 

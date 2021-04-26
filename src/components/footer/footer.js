@@ -5,7 +5,7 @@ import logo from '../../img/logo.svg'
 import logofb from '../../img/logofb.svg'
 import logoInsta from '../../img/logoInsta.svg'
 import logotw from '../../img/logotw.svg'
-import logoComent from '../../img/logoComent.svg'
+
 
 import './footer.css'
 
