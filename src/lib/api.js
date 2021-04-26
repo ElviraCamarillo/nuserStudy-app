@@ -71,6 +71,7 @@ async function getUserSession (token) {
 }
 
 
+
 const api = {
   login,
   newUser,

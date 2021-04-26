@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
+import NavbarUser from '../../components/Navbar/navBarUser'
+
 import Footer from '../../components/footer/footer'
 
 
@@ -13,9 +15,18 @@ import './TriviaResult.css'
 
 
 export default class TriviasQuestionPage extends Component {
+
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
       <div>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
         <NavbarH/>
         <div className="container contianer__trivia">
             <div className="mt-5 wrap__info__trivia">

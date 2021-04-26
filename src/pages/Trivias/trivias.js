@@ -1,10 +1,12 @@
 // Importar modulos
 import React, { Component } from 'react'
 import {Card, CardDeck, ProgressBar} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import Footer from '../../components/footer/footer'
+import NavbarUser from '../../components/Navbar/navBarUser'
 
 // Import CSS
 import './Trivias.css'
@@ -18,9 +20,18 @@ import ObservationImg from '../../img/trivias/observation.svg'
 
 export default class TriviasPage extends Component {
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
+
       <div>
-        <NavbarH/>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
+
         <div className="container">
           <h1 className="my-5">Comprueba cuánto sabes.</h1>
           <div className="row">
@@ -71,15 +82,20 @@ export default class TriviasPage extends Component {
             <Card className="d-flex flex-row card_trivia card_trivia_data">
               <Card.Img src={DataImg} className=" card_trivia_img"/>
               <Card.Body>
-                <Card.Title className="card_trivia_title">Tema: Patrones funcionales</Card.Title>
+                <Card.Title className="card_trivia_title">
+                  <Link to="/tvaloration">Tema: Patrones funcionales</Link>
+                  
+                  </Card.Title>
                 <Card.Text className="card_trivia_text">
                   El método de valoración por patrones funcionales de salud fue desarrollado Marjory Gordon y
                   proporcionan una estructura lógica de valoración y una base de datos para el diagnóstico enfermero.
                 </Card.Text>
                 <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
-                  <div>
-                    Nivel <strong>1</strong> de <strong>3</strong>
-                  </div>
+
+                    <div>
+                      Nivel <strong>1</strong> de <strong>3</strong>
+                    </div>
+                  
                   <div className="wrap_progress data">
                     <ProgressBar now={30} className="progressBarCard" />
                   </div>

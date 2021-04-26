@@ -4,6 +4,8 @@ import {Card, CardDeck, ProgressBar} from 'react-bootstrap'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
+import NavbarUser from '../../components/Navbar/navBarUser'
+
 import Footer from '../../components/footer/footer'
 import TriviaQuestionOne from '../../components/Questions/questionTypeOne'
 import TriviaQuestionTwo from '../../components/Questions/questionTypeTwo'
@@ -21,9 +23,17 @@ import './TriviaQuestion.css'
 
 export default class TriviasQuestionPage extends Component {
   render(){
+    const token =  localStorage.getItem('tokenapp')
+    console.log(token)
     return(
       <div>
-        <NavbarH/>
+        {token !== null
+          ?   
+          <NavbarUser/>
+          :
+          <NavbarH/>
+        }
+
         <div className="container contianer__trivia">
             <div className="mt-5 wrap__info__trivia">
                 <div className="container">
@@ -48,7 +58,7 @@ export default class TriviasQuestionPage extends Component {
 
             <TriviaQuestionTwo/>
             {/* <ResponseError/> */}
-            <ResponseSucess/>
+            {/* <ResponseSucess/> */}
 
 
             <div className="row mb-5">
