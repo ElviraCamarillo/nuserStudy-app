@@ -27,7 +27,6 @@ export default class TriviasQuestionPage extends Component {
           :
           <NavbarH/>
         }
-        <NavbarH/>
         <div className="container contianer__trivia">
             <div className="mt-5 wrap__info__trivia">
                 <div className="container">
