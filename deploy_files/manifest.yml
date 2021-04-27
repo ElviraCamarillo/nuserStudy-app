@@ -1,0 +1,6 @@
+applications:  
+- name: nurse-study-app
+  memory: 128M
+  randome-route: false
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git
