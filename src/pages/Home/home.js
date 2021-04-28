@@ -86,7 +86,7 @@ export default class Home extends Component {
                   <h2 className="mt-4 mb-4">Diagnóstico</h2>
                   <p className="">
                     Consiste en la identificación de los problemas reales y potenciales, así como los recursos con los que cuenta el 
-                    paciente mediante el análisis de datos
+                    paciente mediante el análisis de datos.
                   </p>
                   <a href= ""className="linkPCE mb-2"href="/diagnosticoTema" >Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
                 </div>
@@ -116,7 +116,7 @@ export default class Home extends Component {
             <div className=" flex-column card_info_stage ">
               <h2 className="mt-4 mb-4">Ejecución</h2>
               <p className="">
-              Es la practica del plan de cuidados de enfermería y finaliza con el registro de los cuidados prestados y las respuestas 
+              Es la práctica del plan de cuidados de enfermería y finaliza con el registro de los cuidados prestados y las respuestas 
               del paciente.
               </p>
               <a href= ""className="linkPCE mb-2" href="/EjecucionTema">Saber más<img src={laFlechaCard}alt=""className="flechaVector"/> </a>
@@ -162,7 +162,7 @@ export default class Home extends Component {
                 </div>
                 <div className="col-12 col-md-6 mb-5 d-flex justify-content-start flex-column" >
                     <h1 className="titleHome ">Beneficios de usar<br/> NurseStudy</h1>
-                    <p className="textHome mt-5  mb-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero</p>
+                    <p className="textHome mt-5  mb-5">Te brindamos las herramientas necesarias para que refuerces tu conocimiento acerca del Proceso de Cuidado Enfermero.</p>
                 </div> 
             
           </div> 
