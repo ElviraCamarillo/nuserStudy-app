@@ -18,7 +18,7 @@ export default class Footer extends Component {
 			<div className="footer mt-2" >
                 <div className="divLogo">
                     <h1 className="mt-5 title_footer">
-                      <img className="mr-2" src={logo}alt=""/>NurseStudy
+                      <img className="mr-2" src={logo} alt="NurseStudy logo" />NurseStudy
                     </h1>  
                 </div>
 				<div className="divListas">
@@ -35,16 +35,11 @@ export default class Footer extends Component {
                     </ul>
                     <ul className="listOpciones">
                         <li>Avíso de Privacidad</li>
-                        {/* <li>Terminos y condiciones</li>
-                        <li>Preguntas frecuentes</li>
-                        <li>Otra sección</li> */}
                     </ul>
                 </div>
                 <div className="divNurseApp">
-                    <p className="pNurse">©NurseApp, 2021. Todos los derechos reservados</p>
-                    {/* <p className="pimgComent"><img src={logoComent}alt=""/></p> */}
+                    <p className="pNurse"> ©NurseApp, 2021. Todos los derechos reservados</p>
                 </div>	
-                   
 			</div>
 		)
 	}

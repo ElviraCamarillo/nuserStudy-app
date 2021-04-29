@@ -91,13 +91,9 @@ export default class Signin extends Component {
                     autoComplete="off"
                   />
                   <p className={`response-message ${this.state.statusresponse}`}>{this.state.response}</p>
-                  
                   <div className='d-flex flex-column justify-content-center align-items-start mt-4'>
                     <button className="btn__app btn__dark large" type="submit">REGÍSTRATE</button>
                   </div>  
-
-                   
-
                 </form>
               </div>
             </div>

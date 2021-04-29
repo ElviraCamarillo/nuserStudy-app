@@ -13,6 +13,7 @@ import ResponseError from '../../components/Questions/responseError'
 import ResponseSucess from '../../components/Questions/responseSuccess'
 
 import imageQuestion from '../../img/image__question.png';
+import Api from '../../lib/api'
 
 
 // Import CSS
@@ -22,6 +23,33 @@ import './TriviaQuestion.css'
 
 
 export default class TriviasQuestionPage extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      questions: []
+    }
+  }
+  componentDidMount(){
+    console.log('Estoy en preguntas')
+    const token = window.localStorage.getItem('tokenapp')
+    if(token == null){
+      this.props.history.push(`/login`)
+      return
+    }
+
+    console.log(token)
+
+    async function getQuestions (token){
+      const question = await Api.getQuestionById(token)
+      return question
+    }
+  
+    const question = getQuestions(token)
+    console.log(question)
+
+
+
+  }
   render(){
     const token =  localStorage.getItem('tokenapp')
     console.log(token)
@@ -54,9 +82,9 @@ export default class TriviasQuestionPage extends Component {
                 <img src={imageQuestion} alt="image question"/>
             </div> */}
 
-            {/* <TriviaQuestionOne/> */}
+            <TriviaQuestionOne/>
 
-            <TriviaQuestionTwo/>
+            {/* <TriviaQuestionTwo/> */}
             {/* <ResponseError/> */}
             {/* <ResponseSucess/> */}
 

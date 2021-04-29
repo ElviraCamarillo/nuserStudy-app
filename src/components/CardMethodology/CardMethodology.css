@@ -66,9 +66,3 @@
 .wrap_progress.exploration .progress-bar{
     background-color: #00D6C6;
 }
-
-.wrap__card__trivias .card {
-    width: 44%;
-    flex: 40%;
-    margin-bottom: 2rem;
-}

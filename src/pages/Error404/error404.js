@@ -28,13 +28,12 @@ export default class Error extends Component {
             </div>
             <div className=" row  mb-5 justify-content-center mt-5">
                 <div className=" col-12 col-md-10 col-lg-12 d-flex  justify-content-center align-item-center">
-                    
                     <div className="  col-12  text-center">
-                        <hi className="text404 ">404</hi>
+                        <h1 className="text404 ">404</h1>
                         <h2 className="textPageError mt-5">Página no encontrada</h2>
                         <Button bsPrefix="buttonCardStart mt-3 mb-4" >
                             <a href="/" className="txtOnBtn">Ir a inicio </a>
-                        <img src={arrowBtnError}alt="" className="ml-4"/>
+                            <img src={arrowBtnError}alt="" className="ml-4"/>
                         </Button>
                     </div>
                 </div>
