@@ -62,7 +62,6 @@ export default class TriviasPage extends Component {
       })
       
     }
-    
     getMethod(token)
   }
 
@@ -71,7 +70,7 @@ export default class TriviasPage extends Component {
     console.log(this.state)
     return (
       <div>
-        { token !== null ? <NavbarUser /> : <NavbarH /> }
+        { token !== null ? <NavbarUser/> : <NavbarH /> }
         <div className="container">
           <h1 className="my-5">Comprueba cuánto sabes.</h1>
           <div className="row">
