@@ -9,7 +9,7 @@ import Footer from '../../components/footer/footer'
 import './EvaluationDescription.css'
 
 //import images
-import elLogoCard from '../../img/logo-card-pce-1.svg'
+import elLogoCardEvaluation from '../../img/logo-card-pce-5.svg'
 import iEvaluation from '../../img/blood.svg'
 import iEvaluation2 from '../../img/medical.svg'
 
@@ -29,7 +29,7 @@ export default class EvaluationDescription extends Component {
 
               <div className="row divCardValoration mb-5 ">
                 <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-                  <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
+                  <img src={elLogoCardEvaluation} alt="" className="ImgPhaseOne p-2"/>
                 </div>
                 <div className="col-12 col-md-9">
                   <h2 className="mt-4 mb-4">Evaluación</h2>
@@ -42,7 +42,7 @@ export default class EvaluationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                  <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                  <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                       <img src={iEvaluation} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                   </div>
                   <div className="col-12 col-md-9 mt-4">
@@ -55,7 +55,7 @@ export default class EvaluationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                  <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                  <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                       <img src={iEvaluation2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                   </div>
                   <div className="col-12 col-md-9 mt-4">

@@ -9,7 +9,7 @@ import Footer from '../../components/footer/footer'
 import './ExecutionDescription.css'
 
 //import images
-import elLogoCard from '../../img/logo-card-pce-1.svg'
+import elLogoCardExecution from '../../img/logo-card-pce-3.svg'
 import iExecution from '../../img/ecg.svg'
 import iExecution2 from '../../img/nursing.svg'
 
@@ -29,7 +29,7 @@ export default class ExecutionDescription extends Component {
 
               <div className="row divCardValoration mb-5 ">
                 <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-                  <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
+                  <img src={elLogoCardExecution} alt="" className="ImgPhaseOne p-2"/>
                 </div>
                 <div className="col-12 col-md-9">
                   <h2 className="mt-4 mb-4">Ejecución</h2>
@@ -43,7 +43,7 @@ export default class ExecutionDescription extends Component {
               </div>
               
               <div className="row divCardPhase mb-5">
-                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iExecution} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
@@ -66,7 +66,7 @@ export default class ExecutionDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iExecution2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">

@@ -9,7 +9,7 @@ import Footer from '../../components/footer/footer'
 import './PanningDescription.css'
 
 //import images
-import elLogoCard from '../../img/logo-card-pce-1.svg'
+import elLogoCardPlanning from '../../img/logo-card-pce-4.svg'
 import iDescription from '../../img/electrocardiogram.svg'
 import iPhase3 from '../../img/card.svg'
 
@@ -29,7 +29,7 @@ export default class PlanningDescription extends Component {
 
               <div className="row divCardValoration mb-5 ">
                 <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-                  <img src={elLogoCard} alt="" className="ImgPhaseOne p-2"/>
+                  <img src={elLogoCardPlanning} alt="" className="ImgPhaseOne p-2"/>
                 </div>
                 <div className="col-12 col-md-9">
                   <h2 className="mt-4 mb-4">Planeación</h2>
@@ -42,7 +42,7 @@ export default class PlanningDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iDescription} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">
@@ -57,7 +57,7 @@ export default class PlanningDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className="d-md-block col-12 col-md-3 mt-md-4 mt-lg-0 ">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0 ">
                               <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9 mt-4">

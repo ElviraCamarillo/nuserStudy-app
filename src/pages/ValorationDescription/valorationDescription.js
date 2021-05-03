@@ -61,34 +61,32 @@ export default class ValorationDescription extends Component {
               <h1>Fases</h1>
 
               <div className="row divCardPhase mb-5">
-                          <div className=" d-md-block col-12 d-3 mt-md-4 mt-lg-0">
-                              <img src={iPhase1} alt="" className=" elLogoCard p-2 mt-4 d-flex mx-auto"/>
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                              <img src={iPhase1} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
                               <h3 className="mt-4 mb-4">1-Obtención de datos</h3>
                               <p >
-                              Consta de diferentes tipos; Inicial -Se realiza en el ingreso a la institución sanitaria, para establecer una identificación del paciente, 
-                              del problema, referencias y futuras complicaciones. Centrada en el problema -Determina el estado de un problema identificado 
-                              en la valoración inicial. Urgente: -Identifica problemas peligrosos para la vida, durante alguna crisis fisiológica 
-                              o psicológica del paciente. Revaloracion tras un tiempo: -Compara el estado actual del paciente con los datos anteriormente obtenidos.
-                            
-                              </p>
-                              
-                              <p> Tiene diferentes métodos y tecnicas por ejemplo; Observación:
-                                  Es un proceso lógico y deliberado, para obtener información selectiva, objetiva y organizada a 
-                                  través de los órganos de los sentidos.  Entrevista:
-                                  Es una conversación planificada para dar y obtener información e identificar problemas 
-                                  Exploración física:
-                                  Tiene como objetivos: confirmar los datos obtenidos, detectar nuevos signos o síntomas. Se puede llevar a cabo por aparatos y sistemas o de forma cefalocaudal. 
-                                  Se utilizan métodos y técnicas las cuales son:
-                                  Inspección, palpación, auscultación y percusión
-                              </p>
-                              
+                              Tiene diferentes métodos y tecnicas por ejemplo; Observación:
+                        Es un proceso lógico y deliberado, para obtener información selectiva, objetiva y organizada a 
+                        través de los órganos de los sentidos.  Entrevista:
+                        Es una conversación planificada para dar y obtener información e identificar problemas 
+                        Exploración física:
+                        Tiene como objetivos: confirmar los datos obtenidos, detectar nuevos signos o síntomas. Se puede llevar a cabo por aparatos y sistemas o de forma cefalocaudal. 
+                        Se utilizan métodos y técnicas las cuales son:
+                        Inspección, palpación, auscultación y percusión
+                              </p>  
+                              <p> Consta de diferentes tipos; Inicial -Se realiza en el ingreso a la institución sanitaria, para establecer una identificación del paciente, 
+                    del problema, referencias y futuras complicaciones. Centrada en el problema -Determina el estado de un problema identificado 
+                    en la valoración inicial. Urgente: -Identifica problemas peligrosos para la vida, durante alguna crisis fisiológica 
+                    o psicológica del paciente. Revaloracion tras un tiempo: -Compara el estado actual del paciente con los datos anteriormente obtenidos.
+                  
+                              </p>                    
                             </div>
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className=" d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase2} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -106,7 +104,7 @@ export default class ValorationDescription extends Component {
               </div>
        
               <div className="row divCardPhase mb-5">
-                          <div className="  d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none  d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase3} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
@@ -121,7 +119,7 @@ export default class ValorationDescription extends Component {
               </div>
 
               <div className="row divCardPhase mb-5">
-                          <div className=" d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
+                          <div className="d-none d-sm-none d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
                               <img src={iPhase4} alt="" className="elLogoCard p-2 mt-4 d-flex mx-auto"/>
                           </div>
                           <div className="col-12 col-md-9">
