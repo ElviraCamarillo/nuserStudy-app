@@ -36,13 +36,13 @@ export default class TriviasValorationPage extends Component {
 
     const getMaxLevelMethodology = async (token, idMethodology) => {
       const payload = await Api.getLevelByMethodology("Token " + token, idMethodology)
-      console.log(payload)
+      // console.log(payload)
       return payload
     }
 
     const maxLevelMethodology =  getMaxLevelMethodology(token, idMethodology)
     maxLevelMethodology.then( (response) => {
-      console.log(response)
+      // console.log(response)
 
       this.setState({
         maxLevel: response.difficulty__max 
@@ -52,7 +52,7 @@ export default class TriviasValorationPage extends Component {
       for (let i = 1; i <= maxDifficulty; ++i)  { 
         mapArray[i-1] = i
       }
-      console.log(response, maxDifficulty, mapArray)
+      // console.log(response, maxDifficulty, mapArray)
       this.setState({
         mapArray: mapArray
       })
@@ -63,7 +63,7 @@ export default class TriviasValorationPage extends Component {
   
   render(){
     const token =  localStorage.getItem('tokenapp')
-    console.log(token)
+    // console.log(token)
     
     return(
       <div>
@@ -79,7 +79,7 @@ export default class TriviasValorationPage extends Component {
           <div className="row mt-5 mb-5 d-flex justify-content-between">
             {
               this.state.mapArray.map((element) => {
-                console.log(element)
+                // console.log(element)
                 return (
                   <div className="col-12 col-md-4 mb-3">
                     <div className="cardLevel p-3">

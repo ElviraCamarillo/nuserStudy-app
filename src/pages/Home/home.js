@@ -53,6 +53,8 @@ export default class Home extends Component {
           </div>
           <TituloPCE />
           <div className="row d-flex justify-content-center list_stages">
+            <div className="col-12">
+              <div className="row mb-5">
                 <div className="col-12 d-flex justify-content-between mb-5 p-3  card_container_stage valoration">
                   <div className="my-auto mr-4">
                     <img
@@ -77,11 +79,9 @@ export default class Home extends Component {
                     </a>
                   </div>
                 </div>
-            {/* <div className="col-12">
-              <div className="row mb-5">
 
               </div>
-            </div> */}
+            </div>
           </div>
 
           <div className="row d-flex justify-content-center list_stages">

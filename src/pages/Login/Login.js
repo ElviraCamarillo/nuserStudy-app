@@ -22,7 +22,7 @@ export default class Login extends Component {
     }
   }
   handleInput(event){
-    console.log(event)
+    // console.log(event)
     this.setState({
       [event.target.name]: event.target.value
     })
@@ -47,11 +47,11 @@ export default class Login extends Component {
     }
 
     const payload = await Api.login(username, password)
-    console.log(payload)
+    // console.log(payload)
     // const username = payload.username
     // console.log(username)
     if(payload && payload.token && payload.token !== ""){
-      console.log('redirect to home')
+      // console.log('redirect to home')
       localStorage.setItem('tokenapp', payload.token);
       localStorage.setItem('username', payload.username)
       this.props.history.push(`/`)

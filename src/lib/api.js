@@ -14,12 +14,12 @@ async function login (username, password) {
       })
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     if (payload.token && payload.token !== "") {
       return payload
     }
   } catch (error) {
-    console.log('error hand', error)
+    // console.log('error hand', error)
     return {
       message: 'Error login API',
       data: {
@@ -31,7 +31,7 @@ async function login (username, password) {
 
 async function newUser (dataNewUSer) {
   try {
-    console.log(dataNewUSer)
+    // console.log(dataNewUSer)
     const response = await window.fetch(`${API_URL}users/create/`, {
       method: 'POST',
       headers: {
@@ -40,11 +40,11 @@ async function newUser (dataNewUSer) {
       body: JSON.stringify({ ...dataNewUSer })
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('Error al crear nuevo usuario')
-    console.log(error)
+    // console.log('Error al crear nuevo usuario')
+    // console.log(error)
     return {
       data: {
         newUser: ''
@@ -60,10 +60,10 @@ async function getTriviaMethodology (token) {
       headers: { Authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         methods: []
@@ -80,10 +80,10 @@ async function getTrivia(token) {
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         maxLevel: 0
@@ -94,16 +94,16 @@ async function getTrivia(token) {
 
 //GET Max level by methodology 
 async function getLevelByMethodology (token,idMethodology){
-  console.log(token, idMethodology)
+  // console.log(token, idMethodology)
   try {
     const response = await window.fetch(`${API_URL}methodology/${idMethodology}/difficulty/`,{
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questions: []
@@ -120,7 +120,7 @@ async function getAllQuestion(token){
     const payload = await response.json()
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questions: []
@@ -135,10 +135,10 @@ async function getQuestionById(token,id_question){
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questions: []

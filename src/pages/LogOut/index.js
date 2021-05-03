@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 function Logout (props) {
-    console.log(props)
+    // console.log(props)
     const { replace } = props.history
     useEffect(() => {
         window.localStorage.removeItem('tokenapp')

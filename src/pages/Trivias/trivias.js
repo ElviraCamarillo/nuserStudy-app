@@ -40,7 +40,7 @@ export default class TriviasPage extends Component {
       let tempMethodologyEmpty = []
       let tempMethodologyObject = []
       payload.forEach((cv) => {
-        console.log(cv.methodology)
+        // console.log(cv.methodology)
         if (!tempMethodologyEmpty.includes(cv.methodology)) {
           tempMethodologyEmpty.push(cv.methodology)
           tempMethodologyObject.push({
@@ -62,7 +62,7 @@ export default class TriviasPage extends Component {
 
   render() {
     const token = localStorage.getItem("tokenapp")
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div>
         { token !== null ? <NavbarUser/> : <NavbarH /> }
