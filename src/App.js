@@ -23,103 +23,72 @@ import TriviasResultPage from './pages/TriviaQuestion/triviaResult'
 export default class App extends Component{
   render(){
     return(
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route
-            exact path="/"
-            component={Home}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/login"
-            component={Login}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/logout"
-            component={Logout}
-          />
-        </Switch>
-
-        <Switch>
-          <Route
-            exact path="/signup"
-            component={CreateUser}
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route
+              exact path="/"
+              component={Home}
             />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/pce"
-            component={StagesPCE}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/valoracionTema"
-            component={ValorationDescription}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/diagnosticoTema"
-            component={DiagnosisDescription}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/planeacionTema"
-            component={PlanningDescription}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/ejecucionTema"
-            component={EjecutionDescription}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/evaluacionTema"
-            component={EvaluationDescription}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/trivias"
-            component={TriviasPage}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/error"
-            component={Error}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/tvaloration"
-            component={TriviasValorationPage}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/question"
-            component={TriviasQuestionPage}
-          />
-        </Switch>
-        <Switch>
-          <Route
-            exact path="/question/result"
-            component={TriviasResultPage}
-          />
-        </Switch>
-        
-        
-      </div>
-    </BrowserRouter>
+            <Route
+              exact path="/login"
+              component={Login}
+            />
+            <Route
+              exact path="/logout"
+              component={Logout}
+            />
+            <Route
+              exact path="/signup"
+              component={CreateUser}
+            />
+            <Route
+              exact path="/pce"
+              component={StagesPCE}
+            />
+            <Route
+              exact path="/valoracionTema"
+              component={ValorationDescription}
+            />
+            <Route
+              exact path="/diagnosticoTema"
+              component={DiagnosisDescription}
+            />
+            <Route
+              exact path="/planeacionTema"
+              component={PlanningDescription}
+            />
+            <Route
+              exact path="/ejecucionTema"
+              component={EjecutionDescription}
+            />
+            <Route
+              exact path="/evaluacionTema"
+              component={EvaluationDescription}
+            />
+            <Route
+              exact path="/trivias"
+              component={TriviasPage}
+            />
+            <Route
+              exact path="/error"
+              component={Error}
+            />
+            <Route
+              exact path="/trivias/:idMethodology/levels"
+              component={TriviasValorationPage}
+            />
+            <Route
+              exact path="/question"
+              component={TriviasQuestionPage}
+            />
+            <Route
+              exact path="/question/result"
+              component={TriviasResultPage}
+            />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }

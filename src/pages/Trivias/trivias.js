@@ -34,23 +34,18 @@ export default class TriviasPage extends Component {
   componentDidMount() {
     const token = window.localStorage.getItem("tokenapp")
 
-    // console.log(token)
-    // if(token == null){
-    //   this.props.history.push(`/login`)
-    //   return
-    // }
-
     const getMethod = async (token) => {
-      const payload = await Api.getAllQuestion("Token " + token);
-      console.log(payload)
+      const payload = await Api.getTriviaMethodology("Token " + token);
+      // console.log(payload)
       let tempMethodologyEmpty = []
       let tempMethodologyObject = []
       payload.forEach((cv) => {
-        if (!tempMethodologyEmpty.includes(cv.methodology.methodology)) {
-          tempMethodologyEmpty.push(cv.methodology.methodology)
+        console.log(cv.methodology)
+        if (!tempMethodologyEmpty.includes(cv.methodology)) {
+          tempMethodologyEmpty.push(cv.methodology)
           tempMethodologyObject.push({
-            name: cv.methodology.methodology,
-            id: cv.methodology.id
+            name: cv.methodology,
+            id: cv.id
           })
         }
       })
@@ -81,7 +76,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={DataImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    <Link to="/tvaloration">Tema: Patrones funcionales</Link>
+                    <Link to="/trivias/1/levels">Tema: Patrones funcionales</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     El método de valoración por patrones funcionales de salud
@@ -107,7 +102,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={PCEImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    Tema: Cefalocaudal
+                    <Link to="/trivias/2/levels">Tema: Cefalocaudal</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     Proviene del metodo de Observación que es un proceso logico
@@ -132,7 +127,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={ValorationImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    Tema: Habitos externos
+                    <Link to="/trivias/3/levels">Tema: Habitos externos</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     Proviene del metodo de Observación. Es el conjunto de datos
@@ -158,7 +153,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={ObservationImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    Tema: Anamnesis de enfermeria
+                    <Link to="/trivias/4/levels">Tema: Anamnesis de enfermeria</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     Proviene del metodo de entrevista, es una conversación
@@ -183,7 +178,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={InterviewImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    Tema: Palpación
+                    <Link to="/trivias/5/levels">Tema: Palpación</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     Proviene del metodo Exploración física, se practica a toda
@@ -208,7 +203,7 @@ export default class TriviasPage extends Component {
                 <Card.Img src={ExplorationImg} className=" card_trivia_img" />
                 <Card.Body>
                   <Card.Title className="card_trivia_title">
-                    Tema: Inspección
+                    <Link to="/trivias/6/levels">Tema: Inspección</Link>
                   </Card.Title>
                   <Card.Text className="card_trivia_text">
                     Proviene del metodo Exploración física y tiene como

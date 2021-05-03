@@ -1,6 +1,4 @@
 .cardLevel{
-    width: 19rem;
-    height:17.5rem ;
     background-color: #FEE3E0;
     border-radius: 1rem;
 }
@@ -9,8 +7,7 @@
     background-color: #5E358F;
     border-radius: 30px;
     border: none;
-    height: 3.75rem;
-    width: 13.75rem;
     color: #FFFFFF;
 
 }
+

@@ -4,30 +4,30 @@ const API_URL = 'http://localhost:8000/api/'
 // const API_URL = {process.env.REACT_APP_URL}
 
 async function login (username, password) {
-    try {
-      const response = await window.fetch(`${API_URL}token-id-username/`, {
-        headers: { 'Content-Type': 'application/json' },
-        method: 'POST',
-        body: JSON.stringify({
-          username: username,
-          password: password
-        })
+  try {
+    const response = await window.fetch(`${API_URL}token-id-username/`, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      body: JSON.stringify({
+        username: username,
+        password: password
       })
-      const payload = await response.json()
-      console.log(payload)
-      if (payload.token && payload.token !== "") {
-        return payload
-      }
-    } catch (error) {
-      console.log('error hand', error)
-      return {
-        message: 'Error login API',
-        data: {
-          token: ''
-        }
+    })
+    const payload = await response.json()
+    console.log(payload)
+    if (payload.token && payload.token !== "") {
+      return payload
+    }
+  } catch (error) {
+    console.log('error hand', error)
+    return {
+      message: 'Error login API',
+      data: {
+        token: ''
       }
     }
   }
+}
 
 async function newUser (dataNewUSer) {
   try {
@@ -53,41 +53,26 @@ async function newUser (dataNewUSer) {
   }
 }
 
-// async function getUserSession (token) {
-//   try {
-//     const response = await window.fetch(`${API_URL}api-token-auth/`, {
-//       headers: { authorization: token }
-//     })
-//     const payload = await response.json()
-//     return payload
-//   } catch (error) {
-//     console.log('error', error)
-//     return {
-//       data: {
-//         session: []
-//       }
-//     }
-//   }
-// }
-
+// GET Methodology  
 async function getTriviaMethodology (token) {
   try {
-    const response = await window.fetch(`${API_URL}method`,{
-      headers: { authorization: token }
+    const response = await window.fetch(`${API_URL}method/`,{
+      headers: { Authorization: token }
     })
     const payload = await response.json()
+    console.log(payload)
     return payload
   } catch (error) {
     console.log('error', error)
     return {
       data: {
-        method: []
+        methods: []
       }
     }
   }
-  
 }
 
+// GET Questions
 async function getTrivia(token) {
   // console.log(token)
   try {
@@ -101,31 +86,31 @@ async function getTrivia(token) {
     console.log('error', error)
     return {
       data: {
+        maxLevel: 0
+      }
+    }
+  }
+}
+
+//GET Max level by methodology 
+async function getLevelByMethodology (token,idMethodology){
+  console.log(token, idMethodology)
+  try {
+    const response = await window.fetch(`${API_URL}methodology/${idMethodology}/difficulty/`,{
+      headers: { authorization: token }
+    })
+    const payload = await response.json()
+    console.log(payload)
+    return payload
+  } catch (error) {
+    console.log('error', error)
+    return {
+      data: {
         questions: []
       }
     }
   }
-  
 }
-
-// async function getLevel(token){
-//   try {
-//     const response = await window.fetch(``,{
-//       headers: { authorization: token }
-//     })
-//     const payload = await response.json()
-//     console.log(payload)
-//     return payload
-//   } catch (error) {
-//     console.log('error', error)
-//     return {
-//       data: {
-//         questions: []
-//       }
-//     }
-//   }
-
-// }
 
 async function getAllQuestion(token){
   try {
@@ -165,7 +150,7 @@ async function getQuestionById(token,id_question){
 const api = {
   login,
   newUser,
-  getUserSession,
+  getLevelByMethodology,
   getTriviaMethodology,
   getTrivia,
   getAllQuestion,
@@ -173,4 +158,3 @@ const api = {
 }
 
 export default api
-
