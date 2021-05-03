@@ -50,7 +50,7 @@ export default class Login extends Component {
     console.log(payload)
     // const username = payload.username
     // console.log(username)
-    if(payload.token && payload.token !== ""){
+    if(payload && payload.token && payload.token !== ""){
       console.log('redirect to home')
       localStorage.setItem('tokenapp', payload.token);
       localStorage.setItem('username', payload.username)

@@ -41,7 +41,7 @@ export default class Home extends Component {
                 conocimiento acerca del Proceso de Cuidado Enfermero
               </p>
               <Button bsPrefix="buttonHome buttonHomePrincipal">
-                <a href="/pce" className="textOnBtn">
+                <a href="" className="textOnBtn">
                   Conoce más
                 </a>
                 <img src={flechaHorizontal} alt="Conoce más" className="pl-3" />
@@ -69,7 +69,7 @@ export default class Home extends Component {
                     de los datos sobre <br />
                     el estado de salud del paciente
                   </p>
-                  <a className="linkPCE mb-2" href="/valoracionTema">
+                  <a className="linkPCE mb-2" href="pce/valoracion">
                     Saber más
                     <img
                       src={laFlechaCard}
@@ -98,7 +98,7 @@ export default class Home extends Component {
                   potenciales, así como los recursos con los que cuenta el
                   paciente mediante el análisis de datos
                 </p>
-                <a className="linkPCE mb-2" href="/diagnosticoTema">
+                <a className="linkPCE mb-2" href="/pce/diagnostico">
                   Saber más
                   <img
                     src={laFlechaCard}
@@ -124,7 +124,7 @@ export default class Home extends Component {
                   paciente establecen las prioridades y los objetivos para
                   revolver o disminuir los problemas detectados en el paciente.
                 </p>
-                <a className="linkPCE mb-2" href="/planeacionTema">
+                <a className="linkPCE mb-2" href="/pce/planeacion">
                   Saber más
                   <img
                     src={laFlechaCard}
@@ -152,7 +152,7 @@ export default class Home extends Component {
                   con el registro de los cuidados prestados y las respuestas del
                   paciente.
                 </p>
-                <a className="linkPCE mb-2" href="/EjecucionTema">
+                <a className="linkPCE mb-2" href="/pce/ejecucion">
                   Saber más
                   <img
                     src={laFlechaCard}
@@ -178,7 +178,7 @@ export default class Home extends Component {
                   intervenciones enfermeras y la comparación de las respuestas
                   con los objetivos que se redactaron en la planeación.
                 </p>
-                <a className="linkPCE mb-2" href="/evaluacionTema">
+                <a className="linkPCE mb-2" href="/pce/evaluacion">
                   Saber más
                   <img
                     src={laFlechaCard}

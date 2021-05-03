@@ -58,7 +58,7 @@ export default class ValorationDescription extends Component {
           <h1>Fases</h1>
 
           <div className="row divCardPhase mb-5">
-            <div className=" d-md-block col-12 d-3 mt-md-4 mt-lg-0">
+            <div className=" d-md-block col-12 col-md-3 mt-md-4 mt-lg-0">
               <img
                 src={iPhase1}
                 alt=""
