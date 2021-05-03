@@ -52,34 +52,36 @@ export default class Home extends Component {
             </div>
           </div>
           <TituloPCE />
-          <div className="row list_stages">
-            <div className="col-12">
-              <div className="row mb-5 card_container_stage valoration">
-                <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-                  <img
-                    src={logoCardValoration}
-                    alt="Valoration"
-                    className="elLogoCard p-2"
-                  />
-                </div>
-                <div className="col-12 col-md-9 card_info_stage ">
-                  <h2 className="mt-4 mb-4">Valoración</h2>
-                  <p className="">
-                    Recolección de datos, organización, ponderación y registro
-                    de los datos sobre <br />
-                    el estado de salud del paciente
-                  </p>
-                  <a className="linkPCE mb-2" href="pce/valoracion">
-                    Saber más
+          <div className="row d-flex justify-content-center list_stages">
+                <div className="col-12 d-flex justify-content-between mb-5 p-3  card_container_stage valoration">
+                  <div className="my-auto mr-4">
                     <img
-                      src={laFlechaCard}
-                      alt="arrow vector"
-                      className="flechaVector"
+                      src={logoCardValoration}
+                      alt="Valoration"
+                      className="elLogoCard p-2"
                     />
-                  </a>
+                  </div>
+                  <div className="flex-column card_info_stage ">
+                    <h2 className="mt-4 mb-4">Valoración</h2>
+                    <p className="">
+                      Recolección de datos, organización, ponderación y registro
+                      de los datos sobre el estado de salud del paciente
+                    </p>
+                    <a className="linkPCE mb-2" href="pce/valoracion">
+                      Saber más
+                      <img
+                        src={laFlechaCard}
+                        alt="arrow vector"
+                        className="flechaVector"
+                      />
+                    </a>
+                  </div>
                 </div>
+            {/* <div className="col-12">
+              <div className="row mb-5">
+
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="row d-flex justify-content-center list_stages">
