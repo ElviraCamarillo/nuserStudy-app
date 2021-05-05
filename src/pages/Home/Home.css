@@ -57,12 +57,10 @@
     transform: skew(-10deg);
     opacity: 0.1;
 }
-.card_container_stage .card_info_stage:before{
 
-}
 .card_container_stage.valoration .card_info_stage:before{
     background-color: #68C9BA;
-    left: -100px;
+    left: 100px;
     right: -240px;
 }
 .card_container_stage.diagnosis .card_info_stage:before{

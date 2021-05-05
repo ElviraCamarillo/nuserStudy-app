@@ -27,9 +27,9 @@ export default class CreateUser extends Component {
     };
   }
   handleInput(event) {
-    console.log(event);
-    console.log(event.target.value);
-    console.log(event.target.name);
+    // console.log(event);
+    // console.log(event.target.value);
+    // console.log(event.target.name);
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -42,7 +42,7 @@ export default class CreateUser extends Component {
     const email = this.state.email;
     const password = this.state.password;
     const verifypassword = this.state.verifyPass;
-    console.log(username, first_name, last_name);
+    // console.log(username, first_name, last_name);
     if (
       username === "" ||
       first_name === "" ||
@@ -50,7 +50,7 @@ export default class CreateUser extends Component {
       email === "" ||
       password === ""
     ) {
-      console.log("Campos vacios");
+      // console.log("Campos vacios");
       this.setState({
         ispassok: false,
         response: "No deben existir campos vacios",
@@ -64,7 +64,7 @@ export default class CreateUser extends Component {
         });
       }, 4000)
     } else if (verifypassword !== password) {
-      console.log("password no coinciden");
+      // console.log("password no coinciden");
       this.setState({
         ispassok: false,
         response: "Las contraseñas no coinciden",
@@ -85,7 +85,7 @@ export default class CreateUser extends Component {
         email,
         password,
       })
-      console.log(payload);
+      // console.log(payload);
       if (payload.email) {
         this.setState({
           response: "Usuario registrado correctamente",

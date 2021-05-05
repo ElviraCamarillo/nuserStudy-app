@@ -72,3 +72,15 @@
     flex: 40%;
     margin-bottom: 2rem;
 }
+
+
+@media screen and (max-width: 640px){
+    .wrap__card__trivias .card{
+        width: 100%;
+        flex: 100%;
+    }
+    .card_trivia_title a{
+        text-decoration: none;
+        color: #183b67;
+    }
+}

@@ -1,5 +1,5 @@
 const API_URL = 'http://localhost:8000/api/'
-//const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
+// const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
 
 // const API_URL = {process.env.REACT_APP_URL}
 
@@ -15,12 +15,12 @@ async function login (username, password) {
       })
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     if (payload.token && payload.token !== "") {
       return payload
     }
   } catch (error) {
-    console.log('error hand', error)
+    // console.log('error hand', error)
     return {
       message: 'Error login API',
       data: {
@@ -33,7 +33,7 @@ async function login (username, password) {
 // Create new user
 async function newUser (dataNewUSer) {
   try {
-    console.log(dataNewUSer)
+    // console.log(dataNewUSer)
     const response = await window.fetch(`${API_URL}users/create/`, {
       method: 'POST',
       headers: {
@@ -42,11 +42,11 @@ async function newUser (dataNewUSer) {
       body: JSON.stringify({ ...dataNewUSer })
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('Error al crear nuevo usuario')
-    console.log(error)
+    // console.log('Error al crear nuevo usuario')
+    // console.log(error)
     return {
       data: {
         newUser: ''
@@ -62,10 +62,10 @@ async function getTriviaMethodology (token) {
       headers: { Authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         methods: []
@@ -83,10 +83,10 @@ async function getLevelByMethodology (token,idMethodology){
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questions: []
@@ -96,6 +96,7 @@ async function getLevelByMethodology (token,idMethodology){
 }
 
 
+
 // GET question by level and methodology
 async function getQuestionByLevel (token,id_method, idLevel) {
   try {
@@ -103,10 +104,10 @@ async function getQuestionByLevel (token,id_method, idLevel) {
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questionsByLevel: []
@@ -114,9 +115,6 @@ async function getQuestionByLevel (token,id_method, idLevel) {
     }
   }
 }
-
-
-
 
 
 // GET Questions
@@ -130,7 +128,7 @@ async function getTrivia(token) {
     console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         maxLevel: 0
@@ -146,9 +144,10 @@ async function getAllQuestion(token){
       headers: { authorization: token }
     })
     const payload = await response.json()
+    // console.log(payload)
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questions: []

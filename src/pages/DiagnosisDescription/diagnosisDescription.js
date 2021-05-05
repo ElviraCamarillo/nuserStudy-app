@@ -9,7 +9,7 @@ import Footer from "../../components/footer/footer";
 import "./DiagnosisDescription.css";
 
 //import images
-import elLogoCard from "../../img/logo-card-pce-1.svg";
+import logoCardDiagnosis from "../../img/logo-card-pce-2.svg";
 
 import iDiagnosis from "../../img/bacteria.svg";
 import iDiagnosis2 from "../../img/health-report.svg";
@@ -23,10 +23,10 @@ export default class DiagnosisDescription extends Component {
         <div className="container">
           <div className="row divCardValoration mb-5 ">
             <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-              <img src={elLogoCard} alt="" className="ImgPhaseOne p-2" />
+              <img src={logoCardDiagnosis} alt="" className="ImgPhaseOne p-2" />
             </div>
             <div className="col-12 col-md-9">
-              <h2 className="mt-4 mb-4">Diagnostico</h2>
+              <h2 className="mt-4 mb-4">Diagnóstico</h2>
               <p className="">
                 Segunda fase del proceso de enfermería. En esta fase se
                 interpretan los datos mediante un enunciado de juicio clínico y

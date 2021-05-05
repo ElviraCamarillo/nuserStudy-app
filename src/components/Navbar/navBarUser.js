@@ -33,19 +33,19 @@ export default class NavbarUser extends Component {
                 title="Proceso Cuidado Enfermero"
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="/valoracionTema">
+                <NavDropdown.Item href="/pce/valoracion">
                   Valoración
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/diagnosticoTema">
+                <NavDropdown.Item href="/pce/diagnostico">
                   Diagnóstico
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/ejecucionTema">
+                <NavDropdown.Item href="/pce/ejecucion">
                   Ejecución
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/planeacionTema">
+                <NavDropdown.Item href="/pce/planeacion">
                   Planeación
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/evaluacionTema">
+                <NavDropdown.Item href="/pce/evaluacion">
                   Evaluación
                 </NavDropdown.Item>
               </NavDropdown>

@@ -9,7 +9,7 @@ import Footer from "../../components/footer/footer";
 import "./PanningDescription.css";
 
 //import images
-import elLogoCard from "../../img/logo-card-pce-1.svg";
+import logoCardPlanning from "../../img/logo-card-pce-4.svg";
 import iDescription from "../../img/electrocardiogram.svg";
 import iPhase3 from "../../img/card.svg";
 
@@ -22,7 +22,7 @@ export default class PlanningDescription extends Component {
         <div className="container">
           <div className="row divCardValoration mb-5 ">
             <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-              <img src={elLogoCard} alt="" className="ImgPhaseOne p-2" />
+              <img src={logoCardPlanning} alt="" className="ImgPhaseOne p-2" />
             </div>
             <div className="col-12 col-md-9">
               <h2 className="mt-4 mb-4">Planeación</h2>
@@ -67,21 +67,19 @@ export default class PlanningDescription extends Component {
             <div className="col-12 col-md-9 mt-4">
               <p>Existen diferentes tipos de planeación:</p>
               <p> Inicial, continua y de alta</p>
+
               <p>
-                Propósitos del plan de cuidados:
-                <br />
-                *Ofrecer directrices para el cuidado individualizado del
-                paciente.
-                <br />
-                *Facilitar la comunidad de los cuidados.
-                <br />
-                *Favorecer la designacion del personal de enfermería.
-                <br />
-                *Intervencion, actividad.
-                <br />
-                *Redaccion de las prescripciones de enfermería.
-                <br />
+                <strong>Propósitos del plan de cuidados:</strong>
+                
               </p>
+              <ul>
+                <li>Ofrecer directrices para el cuidado individualizado del
+                paciente.</li>
+                <li>Facilitar la comunidad de los cuidados.</li>
+                <li>Favorecer la designacion del personal de enfermería.</li>
+                <li>Intervencion, actividad.</li>
+                <li>Redaccion de las prescripciones de enfermería.</li>
+              </ul>
             </div>
           </div>
         </div>

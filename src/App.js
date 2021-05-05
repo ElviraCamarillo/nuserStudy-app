@@ -47,23 +47,23 @@ export default class App extends Component{
               component={StagesPCE}
             />
             <Route
-              exact path="/valoracionTema"
+              exact path="/pce/valoracion"
               component={ValorationDescription}
             />
             <Route
-              exact path="/diagnosticoTema"
+              exact path="/pce/diagnostico"
               component={DiagnosisDescription}
             />
             <Route
-              exact path="/planeacionTema"
+              exact path="/pce/planeacion"
               component={PlanningDescription}
             />
             <Route
-              exact path="/ejecucionTema"
+              exact path="/pce/ejecucion"
               component={EjecutionDescription}
             />
             <Route
-              exact path="/evaluacionTema"
+              exact path="/pce/evaluacion"
               component={EvaluationDescription}
             />
             <Route

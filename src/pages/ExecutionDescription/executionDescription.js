@@ -9,7 +9,7 @@ import Footer from "../../components/footer/footer";
 import "./ExecutionDescription.css";
 
 //import images
-import elLogoCard from "../../img/logo-card-pce-1.svg";
+import logoCardEjecution from "../../img/logo-card-pce-3.svg";
 import iExecution from "../../img/ecg.svg";
 import iExecution2 from "../../img/nursing.svg";
 
@@ -22,10 +22,10 @@ export default class ExecutionDescription extends Component {
         <div className="container">
           <div className="row divCardValoration mb-5 ">
             <div className="col-12 col-md-3 mt-md-4 mt-lg-0">
-              <img src={elLogoCard} alt="" className="ImgPhaseOne p-2" />
+              <img src={logoCardEjecution} alt="" className="ImgPhaseOne p-2" />
             </div>
             <div className="col-12 col-md-9">
-              <h2 className="mt-4 mb-4">Ejecución</h2>
+              <h1 className="mt-4 mb-4">Ejecución</h1>
               <p className="">
                 Es la cuarta etapa del proceso de enfermería la cual está
                 enfocada en el inicio de aquellas intervenciones de enfermería
@@ -45,18 +45,19 @@ export default class ExecutionDescription extends Component {
               />
             </div>
             <div className="col-12 col-md-9 mt-4">
-              <p>Fases de ejecución:</p>
+              <h3>Fases de ejecución</h3>
               <p>
-                Preparación: Revisión de las intervenciones, análisis de
+                <strong>Preparación:</strong>  Revisión de las intervenciones, análisis de
                 conocimientos y habilidades exigidas. Se refiere a la ejecución
                 de las intervenciones de enfermería, ayuda a las actividades de
                 la vida diaria
               </p>
-              <p>Fases de documentación:</p>
-              <p>
-                *Formatos narrativos *Formatos electronicos *Formatos
-                estructurados
-              </p>
+              <p><strong> Fases de documentación:</strong> </p>
+              <ul>
+                <li>Formatos narrativos</li>
+                <li>Formatos electrónicos</li>
+                <li>Formatos estructurados</li>
+              </ul>
             </div>
           </div>
 
@@ -71,21 +72,19 @@ export default class ExecutionDescription extends Component {
             <div className="col-12 col-md-9 mt-4">
               <p>Existen diferentes tipos de planeación:</p>
               <p> Inicial, continua y de alta</p>
+
               <p>
-                Propósitos del plan de cuidados:
-                <br />
-                *Ofrecer directrices para el cuidado individualizado del
-                paciente.
-                <br />
-                *Facilitar la comunidad de los cuidados.
-                <br />
-                *Favorecer la designacion del personal de enfermería.
-                <br />
-                *Intervencion, actividad.
-                <br />
-                *Redaccion de las prescripciones de enfermería.
-                <br />
+                <strong>Propósitos del plan de cuidados:</strong>
+                
               </p>
+              <ul>
+                <li>Ofrecer directrices para el cuidado individualizado del
+                paciente.</li>
+                <li>Facilitar la comunidad de los cuidados.</li>
+                <li>Favorecer la designacion del personal de enfermería.</li>
+                <li>Intervencion, actividad.</li>
+                <li>Redaccion de las prescripciones de enfermería.</li>
+              </ul>
             </div>
           </div>
         </div>
