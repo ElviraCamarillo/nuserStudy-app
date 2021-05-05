@@ -79,7 +79,7 @@ export default class App extends Component{
               component={TriviasValorationPage}
             />
             <Route
-              exact path="/question"
+              exact path="/question/:idMethodology/:level"
               component={TriviasQuestionPage}
             />
             <Route

@@ -25,7 +25,7 @@ export default class ResponseSuccess extends Component {
             </svg>
             <div className=" pl-5 info__response">
                 <strong>Correcto</strong>
-                <p>La valoración cefalocaudal se iniciar del abdomen</p>
+                {/* <p>La valoración cefalocaudal se iniciar del abdomen</p> */}
             </div>
 
       </div>

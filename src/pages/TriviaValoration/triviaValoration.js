@@ -20,7 +20,8 @@ export default class TriviasValorationPage extends Component {
     super(props)
     this.state = {
       maxLevel: 0,
-      mapArray: []
+      mapArray: [],
+      idMethodology: ''
     }
   }
 
@@ -28,6 +29,9 @@ export default class TriviasValorationPage extends Component {
     const token = window.localStorage.getItem('tokenapp')
     const  path = this.props.location.pathname.split('/')
     const idMethodology = path[path.length - 2]
+    this.setState({
+      idMethodology: idMethodology
+    })
 
     if(token == null){
       this.props.history.push(`/login`)
@@ -88,10 +92,9 @@ export default class TriviasValorationPage extends Component {
                       <button className='buttonCardLevel' >
                         <div className=" d-flex justify-content-between">
                           <p className="my-auto mr-2">Continuar</p>
-                          <Link to="/question/level/">
+                          <Link to={`/question/${this.state.idMethodology}/${element}/`}>
                             <img src={PlayImg} alt="" className="my-1"/>
                           </Link>
-
                         </div>
                       </button>
                     </div>

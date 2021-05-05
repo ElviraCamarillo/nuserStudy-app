@@ -20,8 +20,8 @@ export default class ResponseError extends Component {
             </svg>
 
             <div className=" pl-5 info__response">
-                <strong>Correcto</strong>
-                <p>La valoración cefalocaudal se iniciar del abdomen</p>
+                <strong>Incorrecto</strong>
+                {/* <p>La valoración cefalocaudal se iniciar del abdomen</p> */}
             </div>
 
       </div>

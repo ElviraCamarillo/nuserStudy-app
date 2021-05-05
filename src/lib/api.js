@@ -101,7 +101,7 @@ async function getLevelByMethodology (token,idMethodology){
 async function getQuestionByLevel (token,id_method, idLevel) {
   try {
     const response = await window.fetch(`${API_URL}questions/${id_method}/${idLevel}/`,{
-      headers: { authorization: token }
+      headers: { Authorization: token }
     })
     const payload = await response.json()
     // console.log(payload)
