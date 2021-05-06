@@ -15,7 +15,7 @@
 }
 
 .btn__answer{
-    min-width: 250px;
+    min-width: 335px;
     border-radius: .5rem;
     box-shadow: 0 2px 10px rgba(0,0,0,.2);
     font-size: 1.5rem;
@@ -52,3 +52,5 @@
     color: #000;
     font-size: 1.5rem;
 }
+
+
