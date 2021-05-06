@@ -74,7 +74,6 @@ async function getTriviaMethodology (token) {
   }
 }
 
-
 //GET Max level by methodology 
 async function getLevelByMethodology (token,idMethodology){
   console.log(token, idMethodology)
@@ -95,8 +94,6 @@ async function getLevelByMethodology (token,idMethodology){
   }
 }
 
-
-
 // GET question by level and methodology
 async function getQuestionByLevel (token,id_method, idLevel) {
   try {
@@ -104,10 +101,9 @@ async function getQuestionByLevel (token,id_method, idLevel) {
       headers: { Authorization: token }
     })
     const payload = await response.json()
-    // console.log(payload)
     return payload
   } catch (error) {
-    // console.log('error', error)
+    console.log('error', error)
     return {
       data: {
         questionsByLevel: []
@@ -116,6 +112,30 @@ async function getQuestionByLevel (token,id_method, idLevel) {
   }
 }
 
+// Update Progress
+async function updateProgress(token, idMethodology, question_id, result) {
+  try {
+    const response = await window.fetch(`${API_URL}updateProgress/`, {
+      headers: { 
+        Authorization: token,
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        methodology_id: parseInt(idMethodology),
+        question_id: parseInt(question_id),
+        result: parseInt(result)
+      })
+    })
+    return response
+  } catch (error) {
+    return{
+      data:{
+        dataUpdate:[]
+      }
+    }
+  }
+}
 
 // GET Questions
 async function getTrivia(token) {
@@ -164,7 +184,8 @@ const api = {
   getTriviaMethodology,
   getTrivia,
   getAllQuestion,
-  getQuestionByLevel
+  getQuestionByLevel,
+  updateProgress
 }
 
 export default api

@@ -11,6 +11,7 @@ import TriviaQuestionOne from '../../components/Questions/questionTypeOne'
 import TriviaQuestionTwo from '../../components/Questions/questionTypeTwo'
 import ResponseError from '../../components/Questions/responseError'
 import ResponseSucess from '../../components/Questions/responseSuccess'
+import TriviaResult from '../../pages/TriviaQuestion/triviaResult'
 
 // import imageQuestion from '../../img/image__question.png';
 import Api from '../../lib/api'
@@ -18,7 +19,6 @@ import Api from '../../lib/api'
 
 // Import CSS
 import './TriviaQuestion.css'
-
 
 
 
@@ -30,9 +30,12 @@ export default class TriviasQuestionPage extends Component {
       typeQuestion: 0,
       answers: [],
       question: '',
+      idQuestion: 0,
       statusResponse:'',
       responseSelected: false,
-      questionNumnber: 1
+      questionNumnber: 1,
+      resultUser: '',
+      isending: false
     }
 
   }
@@ -60,35 +63,80 @@ export default class TriviasQuestionPage extends Component {
     const questionResponse = getQuestionById(`Token ${token}`,idMethodology,idLevel)
     questionResponse.then((response)=>{
       console.log(response)
-      if(response.wrong_answers){
-        this.setState({
-          answers: [...response.wrong_answers, response.right_answer],
-          correct: response.right_answer,
-          question: response.question
-        })
-      }
-      if(response.question_type === 1) {
-        this.setState({
-          typeQuestion: 1
-        })
+      if(!response.is_ending &&  response.is_ending !== true){
+
+        if(response.wrong_answers){
+          this.setState({
+            answers: [...response.wrong_answers, response.right_answer],
+            correct: response.right_answer,
+            question: response.question,
+            idQuestion: response.id
+          })
+        }
+        if(response.question_type === 1) {
+          this.setState({
+            typeQuestion: 1
+          })
+        } else {
+          this.setState({
+            typeQuestion: 2
+          })
+        }
       } else {
         this.setState({
-          typeQuestion: 2
+          isending: true
         })
       }
     })
     
   }
+  updateProgresUser = async (token, idMethodology, idQuestion, result) => {
+    const responseProgress = await Api.updateProgress(`Token ${token}`, idMethodology, idQuestion, result)
+    if(responseProgress.status === 200 && responseProgress.statusText === 'OK'){
+      console.log('getNextQuestion')
+    }
+  }
 
   nextQuestion = () => {
     if(this.state.responseSelected) {
       console.log('Next question')
-      // this.state.questionNumnber = this.state.questionNumnber + 1
+      window.location.reload()
+
+      // async function getQuestionById (token, metId, dif){
+      //   const questionById = await Api.getQuestionByLevel(token, metId, dif)
+      //   return questionById
+      // }
+    
+      // const questionResponse = getQuestionById(`Token ${token}`,idMethodology,idLevel)
+      // questionResponse.then((response)=>{
+      //   if(response.wrong_answers){
+      //     this.setState({
+      //       answers: [...response.wrong_answers, response.right_answer],
+      //       correct: response.right_answer,
+      //       question: response.question,
+      //       idQuestion: response.id
+      //     })
+      //   }
+      //   if(response.question_type === 1) {
+      //     this.setState({
+      //       typeQuestion: 1
+      //     })
+      //   } else {
+      //     this.setState({
+      //       typeQuestion: 2
+      //     })
+      //   }
+      // })
     }
   }
   handleSetResponse = (response) => {
-    console.log(response)  
+    const token = window.localStorage.getItem('tokenapp')
+    const  path = this.props.location.pathname.split('/')
+    const idMethodology = path[path.length - 3]
+
     let correct = this.state.correct
+    let resultUser
+    response === correct ?  resultUser = 1 : resultUser = 0
     if(response === correct){
       this.setState({
         statusResponse: 'success'
@@ -99,12 +147,15 @@ export default class TriviasQuestionPage extends Component {
       })
     } 
     this.setState({
-      responseSelected: true
+      responseSelected: true,
     })
+    this.updateProgresUser(token, idMethodology, this.state.idQuestion, resultUser)
   }
 
   render(){
     const token =  localStorage.getItem('tokenapp')
+    const  path = this.props.location.pathname.split('/')
+    const idMethodology = path[path.length - 3]
     console.log(token)
     let buttonBloqued = ''
     this.state.responseSelected ? buttonBloqued = '' : buttonBloqued = 'disabled'
@@ -116,8 +167,12 @@ export default class TriviasQuestionPage extends Component {
           :
           <NavbarH/>
         }
-
-        <div className="container contianer__trivia">
+        {
+          this.state.isending !== undefined &&
+          this.state.isending === true ?
+          <TriviaResult methodology={idMethodology} />
+          :
+          <div className="container contianer__trivia">
             <div className="mt-5 wrap__info__trivia">
                 <div className="container">
                     <div className="row align-items-center">
@@ -132,16 +187,11 @@ export default class TriviasQuestionPage extends Component {
                 </div>
                 
             </div>
-            
-            {/* <div className="mt-3 wrap__img__question">
-                <img src={imageQuestion} alt="image question"/>
-            </div> */}
-
             {
               this.state.answers &&
               this.state.correct && 
               this.state.question  ?
-
+  
                 <TriviaQuestionTwo 
                   data={this.state.answers ? this.state.answers: []} 
                   correct={this.state.correct}
@@ -159,10 +209,7 @@ export default class TriviasQuestionPage extends Component {
               :
               ''
             }
-            {/* <ResponseError/> */}
-            {/* <ResponseSucess/> */}
-
-
+  
             <div className="row mb-5">
                 <div className="col-12 text-center">
                   {
@@ -187,7 +234,9 @@ export default class TriviasQuestionPage extends Component {
                   }
                 </div>
             </div>
-        </div>
+          </div>
+          
+        }
         <Footer/>
       </div>
     )

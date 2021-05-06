@@ -90,12 +90,12 @@ export default class TriviasValorationPage extends Component {
                       <h2 className="my-3">Nivel {element}</h2>
                       <p>10 preguntas</p>
                       <button className='buttonCardLevel' >
-                        <div className=" d-flex justify-content-between">
-                          <p className="my-auto mr-2">Continuar</p>
                           <Link to={`/question/${this.state.idMethodology}/${element}/`}>
+                          <strong className=" d-flex justify-content-between">
+                            <span className="my-auto mr-2">Continuar</span>
                             <img src={PlayImg} alt="" className="my-1"/>
+                          </strong>
                           </Link>
-                        </div>
                       </button>
                     </div>
                   </div>

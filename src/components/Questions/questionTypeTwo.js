@@ -14,6 +14,7 @@ export default class QuestionTypeTwo extends Component {
           data: this.props
       }
   }
+  
   handleQuestionSelect = (event) => {
       console.log(event)
       console.log(event.target.dataset.res)  
