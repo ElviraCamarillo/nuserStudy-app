@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import NavbarH from "../../components/Navbar/navBar";
 import Footer from "../../components/footer/footer";
 import NavbarUser from "../../components/Navbar/navBarUser";
-import CardMethodology from "../../components/CardMethodology/cardMethodology";
+// import CardMethodology from "../../components/CardMethodology/cardMethodology";
 
 // Import CSS
 import "./Trivias.css";

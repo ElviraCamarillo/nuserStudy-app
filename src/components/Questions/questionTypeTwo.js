@@ -4,9 +4,6 @@ import React, { Component } from 'react'
 // Import CSS
 import './Question.css'
 
-
-
-
 export default class QuestionTypeTwo extends Component {
   constructor(props){
       super(props);
@@ -16,21 +13,20 @@ export default class QuestionTypeTwo extends Component {
   }
   
   handleQuestionSelect = (event) => {
-      console.log(event)
-      console.log(event.target.dataset.res)  
+      //console.log(event)
+      //console.log(event.target.dataset.res)  
       let responseSelect = event.target.dataset.res
       this.props.onSelectQuestion(responseSelect)
-
   }
 
   render(){
     
-    console.log(this.state)
+    //console.log(this.state)
     const answers = this.state.data.data
-    const correct = this.state.data.correct
+    // const correct = this.state.data.correct
     const question = this.state.data.question
     const filteredData = answers.filter(function (el) {
-        return el != "";
+        return el !== "";
     })
     
     return(

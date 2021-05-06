@@ -2,19 +2,8 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 
-// Importar componentes
-import NavbarH from '../../components/Navbar/navBar'
-import NavbarUser from '../../components/Navbar/navBarUser'
-
-import Footer from '../../components/footer/footer'
-
-
-
 // Import CSS
 import './TriviaResult.css'
-
-
-
 
 export default class TriviaResult extends Component {
     constructor(props){
@@ -25,10 +14,10 @@ export default class TriviaResult extends Component {
     }
 
     render(){
-        const token =  localStorage.getItem('tokenapp')
+        // const token =  localStorage.getItem('tokenapp')
         // const path = window.location.pathname.split('/')
         // const idMeth = path[path.length - 3]
-        console.log(this.state.data.methodology)
+        // console.log(this.state.data.methodology)
         // console.log(idMeth)
         return(
         <div>

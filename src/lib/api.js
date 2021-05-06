@@ -1,5 +1,5 @@
-const API_URL = 'http://localhost:8000/api/'
-// const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
+// const API_URL = 'http://localhost:8000/api/'
+const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
 
 // const API_URL = {process.env.REACT_APP_URL}
 
@@ -76,7 +76,7 @@ async function getTriviaMethodology (token) {
 
 //GET Max level by methodology 
 async function getLevelByMethodology (token,idMethodology){
-  console.log(token, idMethodology)
+  //console.log(token, idMethodology)
   try {
     const response = await window.fetch(`${API_URL}methodology/${idMethodology}/difficulty/`,{
       headers: { authorization: token }
@@ -103,7 +103,7 @@ async function getQuestionByLevel (token,id_method, idLevel) {
     const payload = await response.json()
     return payload
   } catch (error) {
-    console.log('error', error)
+    // console.log('error', error)
     return {
       data: {
         questionsByLevel: []
@@ -145,7 +145,7 @@ async function getTrivia(token) {
       headers: { authorization: token }
     })
     const payload = await response.json()
-    console.log(payload)
+    //console.log(payload)
     return payload
   } catch (error) {
     // console.log('error', error)

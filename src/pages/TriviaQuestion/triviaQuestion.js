@@ -1,13 +1,11 @@
 // Importar modulos
 import React, { Component } from 'react'
-import {Card, CardDeck, ProgressBar} from 'react-bootstrap'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
 import NavbarUser from '../../components/Navbar/navBarUser'
 
 import Footer from '../../components/footer/footer'
-import TriviaQuestionOne from '../../components/Questions/questionTypeOne'
 import TriviaQuestionTwo from '../../components/Questions/questionTypeTwo'
 import ResponseError from '../../components/Questions/responseError'
 import ResponseSucess from '../../components/Questions/responseSuccess'
@@ -40,7 +38,7 @@ export default class TriviasQuestionPage extends Component {
 
   }
   componentDidMount(){
-    console.log('Estoy en preguntas')
+    // console.log('Estoy en preguntas')
     const token = window.localStorage.getItem('tokenapp')
     const  path = this.props.location.pathname.split('/')
     const idMethodology = path[path.length - 3]
@@ -49,7 +47,7 @@ export default class TriviasQuestionPage extends Component {
       idMethodology: idMethodology,
       idLevel: idLevel
     })
-    console.log(path, idMethodology, idLevel)
+    // console.log(path, idMethodology, idLevel)
     if(token == null){
       this.props.history.push(`/login`)
       return
@@ -62,7 +60,7 @@ export default class TriviasQuestionPage extends Component {
   
     const questionResponse = getQuestionById(`Token ${token}`,idMethodology,idLevel)
     questionResponse.then((response)=>{
-      console.log(response)
+      //console.log(response)
       if(!response.is_ending &&  response.is_ending !== true){
 
         if(response.wrong_answers){
@@ -93,13 +91,13 @@ export default class TriviasQuestionPage extends Component {
   updateProgresUser = async (token, idMethodology, idQuestion, result) => {
     const responseProgress = await Api.updateProgress(`Token ${token}`, idMethodology, idQuestion, result)
     if(responseProgress.status === 200 && responseProgress.statusText === 'OK'){
-      console.log('getNextQuestion')
+      // console.log('getNextQuestion')
     }
   }
 
   nextQuestion = () => {
     if(this.state.responseSelected) {
-      console.log('Next question')
+      //console.log('Next question')
       window.location.reload()
 
       // async function getQuestionById (token, metId, dif){
@@ -156,7 +154,7 @@ export default class TriviasQuestionPage extends Component {
     const token =  localStorage.getItem('tokenapp')
     const  path = this.props.location.pathname.split('/')
     const idMethodology = path[path.length - 3]
-    console.log(token)
+    // console.log(token)
     let buttonBloqued = ''
     this.state.responseSelected ? buttonBloqued = '' : buttonBloqued = 'disabled'
     return(
@@ -213,7 +211,7 @@ export default class TriviasQuestionPage extends Component {
             <div className="row mb-5">
                 <div className="col-12 text-center">
                   {
-                    buttonBloqued != "" ?
+                    buttonBloqued !== "" ?
                     <button className="btn btn__send__answer" onClick={this.nextQuestion} disabled>
                         Continuar
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

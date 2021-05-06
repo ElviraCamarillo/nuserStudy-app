@@ -18,9 +18,7 @@ import iPhase4 from "../../img/img-phase-4.svg";
 import iPhaseCard from "../../img/img-phases-start.svg";
 
 export default class ValorationDescription extends Component {
-  constructor(props) {
-    super(props);
-  }
+
   checkStart(event) {
     const token = localStorage.getItem("tokenapp");
     if (!token) {
