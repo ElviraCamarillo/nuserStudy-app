@@ -47,8 +47,8 @@ export default class TriviaResult extends Component {
                     </div>
 
                     <div className="mt-5 card__result">
-                        <h1>Felicidades!</h1>
-                        <p>has terminado esta trivia</p>
+                        <h1>¡Felicidades!</h1>
+                        <p>Has terminado este nivel</p>
                         {/* <strong><b>10</b> de <b>15</b> correctas</strong> */}
 
                         <div className="row mb-5 mt-5">
