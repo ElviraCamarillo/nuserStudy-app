@@ -177,9 +177,9 @@ export default class TriviasQuestionPage extends Component {
                     <div className="row align-items-center">
                         <div className="col-12 col-md-8">
                             <strong>Trivia</strong>
-                            <span>Etapas del Proceso Cuidado Enfermero</span>
+                            <span>Etapa de valoración</span>
                         </div>
-                        <div className="col-12 col-md-4 d-flex justify-content-start justify-content-md-end">
+                        <div className="col-12 col-md-4 mt-2 d-flex justify-content-start justify-content-md-end">
                           Nivel <b className="ml-2">{this.state.idLevel}</b>
                         </div>
                     </div>

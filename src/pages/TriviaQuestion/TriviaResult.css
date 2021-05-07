@@ -20,3 +20,12 @@
 .card__result strong{
     font-weight: 400;
 }
+
+@media screen and (max-width: 640px){
+    .card__result h1{
+        font-size: 1.75rem;
+    }
+    .card__result strong, .card__result strong b, .card__result p{
+        font-size: 1.25rem;
+    }
+}

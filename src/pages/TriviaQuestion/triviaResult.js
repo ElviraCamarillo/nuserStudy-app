@@ -49,9 +49,9 @@ export default class TriviaResult extends Component {
                                 <button className="btn btn__filled__arrow" onClick={this.goToLevels}>
                                     Continuar
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="16" fill="black" fill-opacity="0.2"/>
-                                        <path d="M18.96 22.1604L24 16.2804L18.96 10.4004" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M24.0002 16.2803H7.2002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="16" cy="16" r="16" fill="black" fillOpacity="0.2"/>
+                                        <path d="M18.96 22.1604L24 16.2804L18.96 10.4004" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M24.0002 16.2803H7.2002" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </button>
                                 </Link>

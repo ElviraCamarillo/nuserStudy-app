@@ -98,14 +98,14 @@ export default class TriviasPage extends Component {
                     estructura lógica de valoración y una base de datos para el
                     diagnóstico enfermero.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                         Nivel <strong> { this.state[`levelPATRONES`]} </strong> de <strong>3</strong>   
                     </div>
                     <div className="wrap_progress data">
                       <ProgressBar now={(parseInt(this.state[`levelPATRONES`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               
@@ -124,14 +124,14 @@ export default class TriviasPage extends Component {
                     y deliberado para obtener informacion a través de los
                     órganos de los sentidos.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                       Nivel <strong>{this.state[`levelCEFALOCAUDAL`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress pce">
                       <ProgressBar now={(parseInt(this.state[`levelCEFALOCAUDAL`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               : ''
@@ -150,14 +150,14 @@ export default class TriviasPage extends Component {
                     sin realizar ninguna otra maniobra de exploración física y
                     sin ningún interrogatorio.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                       Nivel <strong>{this.state[`levelHABITOS`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress valoration">
                     <ProgressBar now={(parseInt(this.state[`levelHABITOS`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               : ''
@@ -175,14 +175,14 @@ export default class TriviasPage extends Component {
                     planificada para dar y obtener información e identificar
                     problemas para identificar personalmente al individuo.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                       Nivel <strong>{this.state[`levelANAMNESIS`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress observation">
                     <ProgressBar now={(parseInt(this.state[`levelANAMNESIS`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               : ''
@@ -200,14 +200,14 @@ export default class TriviasPage extends Component {
                     persona a fin de reconocer las alteraciones o signos
                     producidos por la enfermedad.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                       Nivel <strong>{this.state[`levelPALPACION`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress interview">
                     <ProgressBar now={(parseInt(this.state[`levelPALPACION`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               : ''
@@ -225,14 +225,14 @@ export default class TriviasPage extends Component {
                     objetivo: confirmar los datos obtenidos, detectar nuevos
                     signos o síntomas.
                   </Card.Text>
-                  <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
+                  <div className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
                       Nivel <strong>{this.state[`levelINSPECCION`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress exploration">
                     <ProgressBar now={(parseInt(this.state[`levelINSPECCION`]) * 100) / 3} className="progressBarCard" />
                     </div>
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
               : ''

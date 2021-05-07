@@ -31,15 +31,15 @@ export default class QuestionTypeTwo extends Component {
     
     return(
       <div>
-        <div className="container">
-            <h1 className="mt-5 mb-3 title__trivia">{question}</h1>
+        <div className="container" >
+          <h2 className="mt-5 mb-3 title__trivia">{question}</h2>
         </div>
         <div className="mt-5 mb-5 grid__answers">
             <div className="row">
               {
                 filteredData.map((option)=> {
                   return  (
-                    <div className="col-12 col-md-6 mb-4 d-flex justify-content-center">
+                    <div className="col-12 col-md-6 mb-4 d-flex justify-content-center" key={option}>
                       <button className="btn btn__answer" data-res={option} onClick={this.handleQuestionSelect}>{option}</button>
                     </div>
                   )

@@ -77,7 +77,7 @@ export default class Login extends Component {
             <div className="row mb-4 align-items-center pt-4">
               <div className="col-md-6">
                 <img src={desktop} alt="" className="mb-4"/>
-                <h2 class="">Inicia sesión</h2>
+                <h2 className="">Inicia sesión</h2>
                 <p>Para ayudarte a mantener tú score</p>
               </div>
               <div className="col-12 col-md-6">
