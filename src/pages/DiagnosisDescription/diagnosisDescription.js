@@ -67,16 +67,12 @@ export default class DiagnosisDescription extends Component {
               />
             </div>
             <div className="col-12 col-md-9 mt-4">
-              <p>El proceso de diagnostico incluye:</p>
-              <p>
-                Análisis: Recolección de datos significativos y relación con los
-                13 dominios
-              </p>
-              <p>
-                Identificación: reconocer los tipos de Dx, real, riesgo, salud y
-                bienestar
-              </p>
-              <p>Formulación de PES</p>
+              <p>El proceso de diagnóstico incluye:</p>
+              <ul>
+                <li>Análisis: Recolección de datos significativos y relación con los 13 dominios.</li>
+                <li>Identificación: reconocer los tipos de Diagnóstico, real, riesgo, salud y bienestar.</li>
+                <li>Formulación de PES.</li>
+              </ul>
             </div>
           </div>
         </div>

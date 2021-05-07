@@ -45,13 +45,10 @@ export default class PlanningDescription extends Component {
             </div>
             <div className="col-12 col-md-9 mt-4">
               <p>
-                Comprende la serie de pasos con los que la enfermera y el
-                paciente establecen las prioridades y los objetivos para
-                revolver o disminuir los problemas detectados en el paciente.
+              Comprende la serie de pasos con los que la enfermera y el paciente establecen las prioridades y los objetivos para resolver o disminuir los problemas detectados en el paciente.
               </p>
               <p>
-                Es una fase sistemática y deliberativa del proceso de enfermera
-                en la que se toman decisiones y se resuelven problemas.
+              Es una fase sistemática y deliberativa del proceso de enfermería en la que se toman decisiones y se resuelven problemas.
               </p>
             </div>
           </div>
@@ -76,9 +73,9 @@ export default class PlanningDescription extends Component {
                 <li>Ofrecer directrices para el cuidado individualizado del
                 paciente.</li>
                 <li>Facilitar la comunidad de los cuidados.</li>
-                <li>Favorecer la designacion del personal de enfermería.</li>
-                <li>Intervencion, actividad.</li>
-                <li>Redaccion de las prescripciones de enfermería.</li>
+                <li>Favorecer la designación del personal de enfermería.</li>
+                <li>Intervención, actividad.</li>
+                <li>Redacción de las prescripciones de enfermería.</li>
               </ul>
             </div>
           </div>

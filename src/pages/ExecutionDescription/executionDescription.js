@@ -27,11 +27,7 @@ export default class ExecutionDescription extends Component {
             <div className="col-12 col-md-9">
               <h1 className="mt-4 mb-4">Ejecución</h1>
               <p className="">
-                Es la cuarta etapa del proceso de enfermería la cual está
-                enfocada en el inicio de aquellas intervenciones de enfermería
-                que ayudan a conseguir los objetivos deseados. Es la practica
-                del plan de cuidados de enfermería y finaliza con el registro de
-                los cuidados prestados y las respuestas del paciente.
+                Es la cuarta etapa del proceso de enfermería la cual está enfocada en el inicio de aquellas intervenciones de enfermería que ayudan a conseguir los objetivos deseados. Es la práctica del plan de cuidados de enfermería y finaliza con el registro de los cuidados prestados y las respuestas del paciente.
               </p>
             </div>
           </div>
@@ -82,8 +78,8 @@ export default class ExecutionDescription extends Component {
                 paciente.</li>
                 <li>Facilitar la comunidad de los cuidados.</li>
                 <li>Favorecer la designacion del personal de enfermería.</li>
-                <li>Intervencion, actividad.</li>
-                <li>Redaccion de las prescripciones de enfermería.</li>
+                <li>Intervención, actividad.</li>
+                <li>Redacción de las prescripciones de enfermería.</li>
               </ul>
             </div>
           </div>
