@@ -88,6 +88,7 @@ export default class TriviasQuestionPage extends Component {
     })
     
   }
+  
   updateProgresUser = async (token, idMethodology, idQuestion, result) => {
     const responseProgress = await Api.updateProgress(`Token ${token}`, idMethodology, idQuestion, result)
     if(responseProgress.status === 200 && responseProgress.statusText === 'OK'){

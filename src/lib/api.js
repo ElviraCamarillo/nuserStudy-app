@@ -1,5 +1,5 @@
-// const API_URL = 'http://localhost:8000/api/'
-const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
+const API_URL = 'http://localhost:8000/api/'
+//const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
 
 // const API_URL = {process.env.REACT_APP_URL}
 
@@ -137,6 +137,27 @@ async function updateProgress(token, idMethodology, question_id, result) {
   }
 }
 
+
+// // GET levelByMethodologyUpdagreUser
+
+async function levelByMethodologyUpgrade(token,id) {
+  try {
+    const response = await window.fetch(`${API_URL}progressbyuser/${id}/`,{
+      headers: { authorization: token }
+    })
+    const payload = await response.json()
+    //console.log(payload)
+    return payload
+  } catch (error) {
+    return{
+      data:{
+        dataUpdate:[]
+      }
+    }
+  }
+}
+
+
 // GET Questions
 async function getTrivia(token) {
   // console.log(token)
@@ -185,7 +206,8 @@ const api = {
   getTrivia,
   getAllQuestion,
   getQuestionByLevel,
-  updateProgress
+  updateProgress,
+  levelByMethodologyUpgrade
 }
 
 export default api

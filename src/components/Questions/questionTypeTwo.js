@@ -40,7 +40,7 @@ export default class QuestionTypeTwo extends Component {
                 filteredData.map((option)=> {
                   return  (
                     <div className="col-12 col-md-6 mb-4 d-flex justify-content-center">
-                      <button class="btn btn__answer" data-res={option} onClick={this.handleQuestionSelect}>{option}</button>
+                      <button className="btn btn__answer" data-res={option} onClick={this.handleQuestionSelect}>{option}</button>
                     </div>
                   )
                 })

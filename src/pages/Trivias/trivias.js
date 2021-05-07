@@ -36,13 +36,14 @@ export default class TriviasPage extends Component {
 
     const getMethod = async (token) => {
       const payload = await Api.getTriviaMethodology("Token " + token);
-      // console.log(payload)
+      console.log(payload)
       let tempMethodologyEmpty = []
       let tempMethodologyObject = []
       payload.forEach((cv) => {
         // console.log(cv.methodology)
         if (!tempMethodologyEmpty.includes(cv.methodology)) {
           tempMethodologyEmpty.push(cv.methodology)
+
           tempMethodologyObject.push({
             name: cv.methodology,
             id: cv.id
@@ -55,14 +56,43 @@ export default class TriviasPage extends Component {
       this.setState({
         arrMethodologyObject: [...tempMethodologyObject]
       })
+      console.log(tempMethodologyObject)
       
     }
     getMethod(token)
+
   }
+  getLevelUpgradeUser = async (token, id ) => {
+    const upgradeUser = await Api.levelByMethodologyUpgrade("Token " + token, id)
+    console.log(upgradeUser)
+  }
+
 
   render() {
     const token = localStorage.getItem("tokenapp")
+    // let nivel = this.getLevelUpgradeUser(token,1)
+    // console.log(nivel)
     // console.log(this.state)
+    console.log(this.state.arrMethodologyObject)
+    if(this.state.arrMethodologyObject && this.state.arrMethodologyObject.length > 0){
+      
+      let objMeths = {
+        PATRONES : '',
+        CEFALOCAUDAL:'',
+        HABITOS:'',
+        ANAMNESIS:'',
+        PALPACION:'',
+        INSPECCION:''
+      }
+      this.state.arrMethodologyObject.forEach((element) =>{
+        console.log(this.getLevelUpgradeUser(token,element.id))
+        console.log(element)
+        
+        // objMeths[element.name] = 
+      })
+    }
+
+
     return (
       <div>
         { token !== null ? <NavbarUser/> : <NavbarH /> }
