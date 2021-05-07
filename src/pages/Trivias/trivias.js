@@ -27,7 +27,13 @@ export default class TriviasPage extends Component {
     this.state = {
       dataQuestion: [],
       arrMethodologyEmpty: [],
-      arrMethodologyObject: []
+      arrMethodologyObject: [],
+      levelPATRONES: 1,
+      levelCEFALOCAUDAL: 1,
+      levelHABITOS: 1,
+      levelANAMNESIS: 1,
+      levelPALPACION: 1,
+      levelINSPECCION: 1
     }
   }
 
@@ -36,14 +42,12 @@ export default class TriviasPage extends Component {
 
     const getMethod = async (token) => {
       const payload = await Api.getTriviaMethodology("Token " + token);
-      console.log(payload)
       let tempMethodologyEmpty = []
       let tempMethodologyObject = []
       payload.forEach((cv) => {
         // console.log(cv.methodology)
         if (!tempMethodologyEmpty.includes(cv.methodology)) {
           tempMethodologyEmpty.push(cv.methodology)
-
           tempMethodologyObject.push({
             name: cv.methodology,
             id: cv.id
@@ -56,43 +60,21 @@ export default class TriviasPage extends Component {
       this.setState({
         arrMethodologyObject: [...tempMethodologyObject]
       })
-      console.log(tempMethodologyObject)
-      
+
+      tempMethodologyObject.forEach( async (met)=>{
+        const upgradeUser = await Api.levelByMethodologyUpgrade("Token " + token, met.id)
+        this.setState({
+          [`level${met.name}`]: upgradeUser.level
+        })
+      })
     }
     getMethod(token)
 
   }
-  getLevelUpgradeUser = async (token, id ) => {
-    const upgradeUser = await Api.levelByMethodologyUpgrade("Token " + token, id)
-    console.log(upgradeUser)
-  }
-
+ 
 
   render() {
     const token = localStorage.getItem("tokenapp")
-    // let nivel = this.getLevelUpgradeUser(token,1)
-    // console.log(nivel)
-    // console.log(this.state)
-    console.log(this.state.arrMethodologyObject)
-    if(this.state.arrMethodologyObject && this.state.arrMethodologyObject.length > 0){
-      
-      let objMeths = {
-        PATRONES : '',
-        CEFALOCAUDAL:'',
-        HABITOS:'',
-        ANAMNESIS:'',
-        PALPACION:'',
-        INSPECCION:''
-      }
-      this.state.arrMethodologyObject.forEach((element) =>{
-        console.log(this.getLevelUpgradeUser(token,element.id))
-        console.log(element)
-        
-        // objMeths[element.name] = 
-      })
-    }
-
-
     return (
       <div>
         { token !== null ? <NavbarUser/> : <NavbarH /> }
@@ -101,7 +83,9 @@ export default class TriviasPage extends Component {
           <div className="row">
             <CardDeck className="mb-5 wrap__card__trivias">
             { 
-              this.state.arrMethodologyEmpty.length > 0 && this.state.arrMethodologyEmpty.includes("PATRONES") ?
+              this.state.arrMethodologyEmpty.length > 0 &&
+              this.state.arrMethodologyEmpty.includes("PATRONES") ?
+              
               <Card className="d-flex flex-row card_trivia card_trivia_data">
                 <Card.Img src={DataImg} className=" card_trivia_img" />
                 <Card.Body>
@@ -116,14 +100,15 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                        Nivel <strong> { this.state[`levelPATRONES`]} </strong> de <strong>3</strong>   
                     </div>
                     <div className="wrap_progress data">
-                      <ProgressBar now={30} className="progressBarCard" />
+                      <ProgressBar now={(parseInt(this.state[`levelPATRONES`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>
               </Card>
+              
               : ''
             } 
             { 
@@ -141,10 +126,10 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                      Nivel <strong>{this.state[`levelCEFALOCAUDAL`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress pce">
-                      <ProgressBar now={30} className="progressBarCard" />
+                      <ProgressBar now={(parseInt(this.state[`levelCEFALOCAUDAL`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>
@@ -167,10 +152,10 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                      Nivel <strong>{this.state[`levelHABITOS`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress valoration">
-                      <ProgressBar now={30} className="progressBarCard" />
+                    <ProgressBar now={(parseInt(this.state[`levelHABITOS`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>
@@ -192,10 +177,10 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                      Nivel <strong>{this.state[`levelANAMNESIS`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress observation">
-                      <ProgressBar now={30} className="progressBarCard" />
+                    <ProgressBar now={(parseInt(this.state[`levelANAMNESIS`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>
@@ -217,10 +202,10 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                      Nivel <strong>{this.state[`levelPALPACION`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress interview">
-                      <ProgressBar now={30} className="progressBarCard" />
+                    <ProgressBar now={(parseInt(this.state[`levelPALPACION`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>
@@ -242,10 +227,10 @@ export default class TriviasPage extends Component {
                   </Card.Text>
                   <Card.Text className="card_trivia_text d-flex justify-content-between align-items-center">
                     <div>
-                      Nivel <strong>1</strong> de <strong>3</strong>
+                      Nivel <strong>{this.state[`levelINSPECCION`]}</strong> de <strong>3</strong>
                     </div>
                     <div className="wrap_progress exploration">
-                      <ProgressBar now={30} className="progressBarCard" />
+                    <ProgressBar now={(parseInt(this.state[`levelINSPECCION`]) * 100) / 3} className="progressBarCard" />
                     </div>
                   </Card.Text>
                 </Card.Body>

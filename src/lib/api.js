@@ -197,6 +197,23 @@ async function getAllQuestion(token){
   }
 }
 
+// GET questions level
+async function getTotalQuestions(token, methodology, level){
+  try {
+    const response = await window.fetch(`${API_URL}question/counter/${methodology}/${level}/`,{
+      headers: { authorization: token }
+    })
+    const payload = await response.json()
+    return payload
+  } catch (error) {
+    return {
+      error : {
+        message: error
+      }
+    }
+  }
+}
+
 
 const api = {
   login,
@@ -207,7 +224,8 @@ const api = {
   getAllQuestion,
   getQuestionByLevel,
   updateProgress,
-  levelByMethodologyUpgrade
+  levelByMethodologyUpgrade,
+  getTotalQuestions
 }
 
 export default api

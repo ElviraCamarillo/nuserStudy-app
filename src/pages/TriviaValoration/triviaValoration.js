@@ -40,27 +40,43 @@ export default class TriviasValorationPage extends Component {
 
     const getMaxLevelMethodology = async (token, idMethodology) => {
       const payload = await Api.getLevelByMethodology("Token " + token, idMethodology)
-      // console.log(payload)
       return payload
     }
 
     const maxLevelMethodology =  getMaxLevelMethodology(token, idMethodology)
     maxLevelMethodology.then( (response) => {
-      // console.log(response)
-
       this.setState({
         maxLevel: response.difficulty__max 
       })
       let maxDifficulty = response.difficulty__max
       let mapArray = new Array(maxDifficulty); 
+      let mapLevelQuestion = new Array(maxDifficulty); 
       for (let i = 1; i <= maxDifficulty; ++i)  { 
         mapArray[i-1] = i
+        mapLevelQuestion[i-1] = i
       }
-      // console.log(response, maxDifficulty, mapArray)
+      console.log(mapArray, mapLevelQuestion)
       this.setState({
-        mapArray: mapArray
+        mapArray: mapArray,
+        mapLevelQuestion: mapLevelQuestion
       })
+
+      const getTotalQuestions = async (token, idMethodology, id) => {
+        const payload = await Api.getTotalQuestions("Token " + token, idMethodology, id)
+        return payload
+      }
+      mapLevelQuestion.forEach((el)=>{
+        const totalLevel1Q =  getTotalQuestions(token, idMethodology, el)
+        totalLevel1Q.then((res) => {
+          console.log(res)
+          this.setState({
+            [`totalLevel${el}`]: res.total_questions_by_meth_by_diff
+          })
+        })
+      })
+      
     })
+
      
   }
 
@@ -83,12 +99,12 @@ export default class TriviasValorationPage extends Component {
           <div className="row mt-5 mb-5 d-flex justify-content-between">
             {
               this.state.mapArray.map((element) => {
-                // console.log(element)
+                console.log(element)
                 return (
                   <div className="col-12 col-md-4 mb-3">
                     <div className="cardLevel p-3">
                       <h2 className="my-3">Nivel {element}</h2>
-                      <p>10 preguntas</p>
+                      <p>{this.state[`totalLevel${element}`]} preguntas</p>
                       <button className='buttonCardLevel' >
                           <Link to={`/question/${this.state.idMethodology}/${element}/`}>
                           <strong className=" d-flex justify-content-between">
