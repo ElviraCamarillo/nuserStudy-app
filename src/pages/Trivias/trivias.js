@@ -222,7 +222,6 @@ export default class TriviasPage extends Component {
               </Card>
               : ''
             }
-            
             </CardDeck>
           </div>
         </div>
