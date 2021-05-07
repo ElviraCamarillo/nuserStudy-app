@@ -34,7 +34,7 @@ export default class Footer extends Component {
                         </li>
                     </ul>
                     <ul className="listOpciones">
-                        <li>Avíso de Privacidad</li>
+                        <li>Aviso de Privacidad</li>
                     </ul>
                 </div>
                 <div className="divNurseApp">

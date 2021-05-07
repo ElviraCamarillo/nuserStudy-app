@@ -1,5 +1,5 @@
-const API_URL = 'http://localhost:8000/api/'
-//const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
+// const API_URL = 'http://localhost:8000/api/'
+const API_URL = 'http://ec2-3-140-250-35.us-east-2.compute.amazonaws.com/api/'
 
 // const API_URL = {process.env.REACT_APP_URL}
 
