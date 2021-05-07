@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 //importar elementos de bootstrap
 import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 // Importar componentes
 import NavbarH from '../../components/Navbar/navBar'
@@ -31,10 +32,12 @@ export default class Error extends Component {
                     <div className="  col-12  text-center">
                         <h1 className="text404 ">404</h1>
                         <h2 className="textPageError mt-5">Página no encontrada</h2>
-                        <Button bsPrefix="buttonCardStart mt-3 mb-4" >
-                            <a href="/" className="txtOnBtn">Ir a inicio </a>
-                            <img src={arrowBtnError}alt="" className="ml-4"/>
-                        </Button>
+                        <Link className=" d-flex justify-content-center" to="/">
+                          <Button bsPrefix="buttonCardStart mt-3 mb-4 d-flex justify-content-center align-items-center" >
+                              <span className="txtOnBtn">Ir a inicio</span>
+                              <img src={arrowBtnError}alt="" className="ml-4"/>
+                          </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

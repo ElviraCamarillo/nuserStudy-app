@@ -71,10 +71,6 @@ export default class App extends Component{
               component={TriviasPage}
             />
             <Route
-              exact path="/error"
-              component={Error}
-            />
-            <Route
               exact path="/trivias/:idMethodology/levels"
               component={TriviasValorationPage}
             />
@@ -85,6 +81,10 @@ export default class App extends Component{
             <Route
               exact path="/question/result"
               component={TriviasResultPage}
+            />
+            <Route
+              exact path="*"
+              component={Error}
             />
           </Switch>
         </div>
