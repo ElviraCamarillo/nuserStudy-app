@@ -55,7 +55,7 @@ export default class TriviasValorationPage extends Component {
         mapArray[i-1] = i
         mapLevelQuestion[i-1] = i
       }
-      console.log(mapArray, mapLevelQuestion)
+      // console.log(mapArray, mapLevelQuestion)
       this.setState({
         mapArray: mapArray,
         mapLevelQuestion: mapLevelQuestion
@@ -68,7 +68,7 @@ export default class TriviasValorationPage extends Component {
       mapLevelQuestion.forEach((el)=>{
         const totalLevel1Q =  getTotalQuestions(token, idMethodology, el)
         totalLevel1Q.then((res) => {
-          console.log(res)
+          // console.log(res)
           this.setState({
             [`totalLevel${el}`]: res.total_questions_by_meth_by_diff
           })
@@ -76,11 +76,7 @@ export default class TriviasValorationPage extends Component {
       })
       
     })
-
-     
   }
-
-  
   render(){
     const token =  localStorage.getItem('tokenapp')
     // console.log(token)
@@ -95,14 +91,14 @@ export default class TriviasValorationPage extends Component {
         }
         <div className="container">
           <h1 className="mt-5">Niveles</h1>
-          <p>Etapa de valoracion</p>
+          <p>Etapa de valoración</p>
           <div className="row mt-5 mb-5 d-flex justify-content-between">
             {
               this.state.mapArray.map((element) => {
-                console.log(element)
+                // console.log(element)
                 return (
-                  <div className="col-12 col-md-4 mb-3">
-                    <div className="cardLevel p-3">
+                  <div className="col-12 col-md-4 mb-3" key={element}>
+                    <div className="cardLevel p-3" >
                       <h2 className="my-3">Nivel {element}</h2>
                       <p>{this.state[`totalLevel${element}`]} preguntas</p>
                       <button className='buttonCardLevel' >
